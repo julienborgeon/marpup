@@ -1,0 +1,86 @@
+/*
+ * @theme marpup
+ * @size 16:9 1280px 720px
+*/
+
+/* Import des styles par défaut de Marp - NE PAS TOUCHER ! */
+@import 'default';
+
+/*
+==========================================================================
+  TOKENS / Variables de design
+  (personnalisable)
+==========================================================================
+*/
+
+:root {
+  /* Couleur de fond de la page/slide */
+  --marpup-color-background: #faf9f6;
+  /* Couleur du texte par défaut */
+  --marpup-color-foreground: #202020;
+  /* Couleur du texte accentué (pzr défaut : titres) */
+  --marpup-color-primary: #7c3f58;
+  /* Couleur du texte adoucie (par défaut : entêtes) */
+  --marpup-color-muted: #626262;
+
+  /* Police des titres */
+  --marpup-font-heading: system-ui, sans-serif;
+  /* Police du corps de texte */
+  --marpup-font-body: system-ui, sans-serif;
+
+  /* Marges intérieures de la page/slide */
+  --marpup-slide-padding: 64px;
+}
+
+/*
+==========================================================================
+  CORE / Styles par défaut du thème
+  (personnalisation non recommandée)
+==========================================================================
+*/
+
+/* Styles globaux de la page/slide */
+section {
+  background: var(--marpup-color-background);
+  color: var(--marpup-color-foreground);
+
+  font-family: var(--marpup-font-body);
+  font-size: 30px;
+
+  padding: var(--marpup-slide-padding);
+}
+
+/* Styles communs des titres */
+h1,
+h2,
+h3 {
+  color: var(--marpup-color-primary);
+  font-family: var(--marpup-font-heading);
+}
+
+/* Titre de niveau 1 */
+h1 {
+  font-size: 2.2em;
+}
+
+/* Titre de niveau 2 */
+h2 {
+  font-size: 1.7em;
+}
+
+/* Ancre / lien */
+a {
+  color: var(--marpup-color-primary);
+}
+
+/* Bloc de citation */
+blockquote {
+  border-left: 0.2em solid var(--marpup-color-primary);
+  padding-left: 1em;
+}
+
+/* Entête et pied de page */
+footer,
+header {
+  color: var(--marpup-color-muted);
+}

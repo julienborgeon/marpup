@@ -1,0 +1,46 @@
+{
+  "Crée un template": {
+    "scope": "markdown",
+    "prefix": "marpup-template",
+    "body": [
+      "---",
+      "marp: true",
+      "theme: marpup",
+      "size: 16:9",
+      "title: ${1:Titre}",
+      "author: ${2:Auteur}",
+      "paginate: true",
+      "header: ${3:}",
+      "footer: ${4:}",
+      "---",
+      "",
+      "# ${1:Titre}",
+      "",
+      "${5:Sous-titre}",
+      "",
+      "---",
+      "",
+      "$0",
+    ],
+    "description": "Crée un nouveau diaporama MarpUp",
+  },
+
+  "Ajoute une slide": {
+    "scope": "markdown",
+    "prefix": "marpup-slide",
+    "body": ["", "---", "", "## ${1:Titre}", "", "$0"],
+    "description": "Ajoute une nouvelle slide",
+  },
+
+  "Insère un tableau": {
+    "scope": "markdown",
+    "prefix": "marpup-table",
+    "body": [
+      "| ${1:Colonne 1} | ${2:Colonne 2} |",
+      "| --- | --- |",
+      "| ${3:Valeur} | ${4:Valeur} |",
+      "$0",
+    ],
+    "description": "Insère un tableau Markdown",
+  },
+}

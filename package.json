@@ -1,0 +1,24 @@
+{
+  "name": "marpup",
+  "version": "1.0.0",
+  "description": "A teacher-friendly Markdown presentation toolkit powered by Marp.",
+  "scripts": {
+    "dev": "marp --server ./slides",
+    "build": "npm run build:html",
+    "build:html": "marp --output ./dist",
+    "build:pdf": "marp --output ./dist --pdf",
+    "build:pptx": "marp --output ./dist --pptx"
+  },
+  "keywords": [
+    "marp",
+    "markdown",
+    "slides",
+    "education",
+    "teaching"
+  ],
+  "author": "Julien Borgeon",
+  "license": "MIT",
+  "devDependencies": {
+    "@marp-team/marp-cli": "^4.5.1"
+  }
+}
