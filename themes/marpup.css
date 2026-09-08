@@ -39,18 +39,64 @@
 ==========================================================================
 */
 
-/* Styles globaux de la page/slide */
+/* Page/slide par défaut */
 section {
+  --marpup-header-height: 64px;
+  --marpup-footer-height: 64px;
+  --marpup-slide-padding: 64px;
+  --marpup-content-gap: 24px;
+
+  display: flex;
+  flex-direction: column;
   background: var(--marpup-color-background);
   color: var(--marpup-color-foreground);
-
   font-family: var(--marpup-font-body);
   font-size: 30px;
-
-  padding: var(--marpup-slide-padding);
+  padding: calc(var(--marpup-header-height) + var(--marpup-content-gap))
+    var(--marpup-slide-padding)
+    calc(var(--marpup-footer-height) + var(--marpup-content-gap));
 }
 
-/* Styles communs des titres */
+/* Numéro de page par défaut */
+section::after {
+  position: absolute;
+  right: var(--marpup-slide-padding);
+  bottom: 0;
+  height: var(--marpup-footer-height);
+  display: flex;
+  align-items: center;
+  padding: 0;
+  z-index: 11;
+}
+
+/* Entête et pied de page par défaut */
+footer,
+header {
+  color: var(--marpup-color-muted);
+  position: absolute;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+  padding-inline: var(--marpup-slide-padding);
+  display: flex;
+  align-items: center;
+  background: var(--marpup-color-background);
+  z-index: 10;
+}
+
+/* Entête par défaut */
+header {
+  top: 0;
+  height: var(--marpup-header-height);
+}
+
+/* Pied de page par défaut */
+footer {
+  bottom: 0;
+  height: var(--marpup-footer-height);
+}
+
+/* Titres par défaut */
 h1,
 h2,
 h3 {
@@ -58,29 +104,107 @@ h3 {
   font-family: var(--marpup-font-heading);
 }
 
-/* Titre de niveau 1 */
+/* Titre de niveau 1 par défaut */
 h1 {
   font-size: 2.2em;
 }
 
-/* Titre de niveau 2 */
+/* Titre de niveau 2 par défaut */
 h2 {
   font-size: 1.7em;
 }
 
-/* Ancre / lien */
+/* Ancre/lien par défaut */
 a {
   color: var(--marpup-color-primary);
 }
 
-/* Bloc de citation */
+/* Image par défaut */
+img {
+  display: block;
+  user-select: none;
+}
+
+/* Bloc de citation par défaut */
 blockquote {
   border-left: 0.2em solid var(--marpup-color-primary);
   padding-left: 1em;
 }
 
-/* Entête et pied de page */
-footer,
-header {
-  color: var(--marpup-color-muted);
+/*
+==========================================================================
+  MEDIA / Styles custom des media du thème
+  (personnalisation non recommandée)
+==========================================================================
+*/
+
+/* Conteneur d'une image seule */
+section > p:has(> img:only-child) {
+  flex: 1 1 0;
+  min-height: 0;
+  margin-bottom: 0;
+  margin-block: 0.25rem;
+}
+
+/* Image seule */
+section > p:has(> img:only-child) > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: contain;
+}
+
+/* Image alignée à gauche ou à droite */
+section:is(.image-left, .image-right) > p:has(> img:only-child) > img {
+  width: auto;
+}
+
+/* Image alignée à gauche */
+section.image-left > p:has(> img:only-child) > img {
+  margin-right: auto;
+}
+
+/* Image alignée à droite */
+section.image-right > p:has(> img:only-child) > img {
+  margin-left: auto;
+}
+
+/* Conteneur de plusieurs images */
+section:is(.images-2, .images-3, .images-4) > p:has(> img) {
+  display: grid;
+  gap: var(--marpup-media-gap, 1rem);
+  flex: 1;
+  min-height: 0;
+}
+
+/* Images d'une grille */
+section:is(.images-2, .images-3, .images-4) > p:has(> img) > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  object-fit: contain;
+}
+
+/* Masquage des sauts de ligne entre les images */
+section:is(.images-2, .images-3, .images-4) > p:has(> img) > br {
+  display: none;
+}
+
+/* Grille de 2 images */
+section.images-2 > p:has(> img) {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* Grille de 3 images */
+section.images-3 > p:has(> img) {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* Grille de 4 images */
+section.images-4 > p:has(> img) {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
 }

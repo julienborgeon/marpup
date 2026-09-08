@@ -1,7 +1,7 @@
 {
   "Crée un template": {
     "scope": "markdown",
-    "prefix": "marpup-template",
+    "prefix": "up-template",
     "body": [
       "---",
       "marp: true",
@@ -27,14 +27,14 @@
 
   "Ajoute une slide": {
     "scope": "markdown",
-    "prefix": "marpup-slide",
+    "prefix": "up-slide",
     "body": ["", "---", "", "## ${1:Titre}", "", "$0"],
     "description": "Ajoute une nouvelle slide",
   },
 
   "Insère un tableau": {
     "scope": "markdown",
-    "prefix": "marpup-table",
+    "prefix": "up-table",
     "body": [
       "| ${1:Colonne 1} | ${2:Colonne 2} |",
       "| --- | --- |",
@@ -42,5 +42,47 @@
       "$0",
     ],
     "description": "Insère un tableau Markdown",
+  },
+
+  "Insère une image locale": {
+    "scope": "markdown",
+    "prefix": "up-image",
+    "body": ["![${1:Description}](../assets/images/${2:image.jpg})$0"],
+    "description": "Insère une image locale",
+  },
+
+  "Insère image à gauche": {
+    "scope": "markdown",
+    "prefix": "@image-gauche",
+    "body": ["<!-- _class: image-gauche -->", ""],
+    "description": "Insère une image à gauche",
+  },
+
+  "Insère image à droite": {
+    "scope": "markdown",
+    "prefix": "@image-droite",
+    "body": ["<!-- _class: image-droite -->", ""],
+    "description": "Insère une image à droite",
+  },
+
+  "Insère 2 images": {
+    "scope": "markdown",
+    "prefix": "@images-2",
+    "body": ["<!-- _class: images-2 -->", ""],
+    "description": "Insère 2 images en vis-à-vis",
+  },
+
+  "Insère 3 images": {
+    "scope": "markdown",
+    "prefix": "@images-3",
+    "body": "<!-- _class: images-3 -->",
+    "description": "Insère 3 images en vis-à-vis",
+  },
+
+  "Insère 4 images": {
+    "scope": "markdown",
+    "prefix": "@images-4",
+    "body": "<!-- _class: images-4 -->",
+    "description": "Insère 4 images sur 2 colonnes",
   },
 }
