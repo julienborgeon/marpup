@@ -1,6 +1,21 @@
 {
   "markdown.marp.themes": ["./themes/marpup.css"],
 
+  "sortcss.sortOnSave": true,
+  "sortcss.sortingStrategy": "concentric-css",
+
+  "files.associations": {
+    "*.css": "css"
+  },
+
+  "[css]": {
+    "editor.quickSuggestions": {
+      "other": "on",
+      "comments": "off",
+      "strings": "on"
+    }
+  },
+
   "editor.tabCompletion": "on",
   "editor.snippetSuggestions": "top",
 

@@ -49,39 +49,40 @@ section {
   display: flex;
   flex-direction: column;
   background: var(--marpup-color-background);
-  color: var(--marpup-color-foreground);
-  font-family: var(--marpup-font-body);
-  font-size: 30px;
   padding: calc(var(--marpup-header-height) + var(--marpup-content-gap))
     var(--marpup-slide-padding)
     calc(var(--marpup-footer-height) + var(--marpup-content-gap));
+  color: var(--marpup-color-foreground);
+  font-size: 30px;
+  font-family: var(--marpup-font-body);
 }
 
 /* Numéro de page par défaut */
 section::after {
+  display: flex;
   position: absolute;
   right: var(--marpup-slide-padding);
   bottom: 0;
-  height: var(--marpup-footer-height);
-  display: flex;
   align-items: center;
-  padding: 0;
   z-index: 11;
+  padding: 0;
+  height: var(--marpup-footer-height);
+  font-size: 18px;
 }
 
 /* Entête et pied de page par défaut */
 footer,
 header {
-  color: var(--marpup-color-muted);
-  position: absolute;
-  left: 0;
-  right: 0;
-  box-sizing: border-box;
-  padding-inline: var(--marpup-slide-padding);
   display: flex;
+  position: absolute;
+  right: 0;
+  left: 0;
   align-items: center;
-  background: var(--marpup-color-background);
   z-index: 10;
+  box-sizing: border-box;
+  background: var(--marpup-color-background);
+  padding-inline: var(--marpup-slide-padding);
+  color: var(--marpup-color-muted);
 }
 
 /* Entête par défaut */
@@ -102,6 +103,8 @@ h2,
 h3 {
   color: var(--marpup-color-primary);
   font-family: var(--marpup-font-heading);
+  hyphens: auto;
+  overflow-wrap: break-word;
 }
 
 /* Titre de niveau 1 par défaut */
@@ -141,9 +144,9 @@ blockquote {
 /* Conteneur d'une image seule */
 section > p:has(> img:only-child) {
   flex: 1 1 0;
-  min-height: 0;
   margin-bottom: 0;
   margin-block: 0.25rem;
+  min-height: 0;
 }
 
 /* Image seule */
@@ -173,8 +176,8 @@ section.image-right > p:has(> img:only-child) > img {
 /* Conteneur de plusieurs images */
 section:is(.images-2, .images-3, .images-4) > p:has(> img) {
   display: grid;
-  gap: var(--marpup-media-gap, 1rem);
   flex: 1;
+  gap: var(--marpup-media-gap, 1rem);
   min-height: 0;
 }
 
@@ -182,8 +185,8 @@ section:is(.images-2, .images-3, .images-4) > p:has(> img) {
 section:is(.images-2, .images-3, .images-4) > p:has(> img) > img {
   display: block;
   width: 100%;
-  height: 100%;
   min-width: 0;
+  height: 100%;
   min-height: 0;
   object-fit: contain;
 }
@@ -205,6 +208,6 @@ section.images-3 > p:has(> img) {
 
 /* Grille de 4 images */
 section.images-4 > p:has(> img) {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-template-rows: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
