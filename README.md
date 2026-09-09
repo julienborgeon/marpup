@@ -1,3 +1,7 @@
+# Initialiser le projet, une fois téléchargé
+
+`npm install`
+
 # Workflow Git
 
 ```git
