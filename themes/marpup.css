@@ -6,6 +6,39 @@
 /* Import des styles par défaut de Marp - NE PAS TOUCHER ! */
 @import 'default';
 
+/* Import des polices personnalisées */
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/AtkinsonHyperlegibleNext-Regular.woff2')
+    format('woff2');
+  font-family: 'Atkinson Hyperlegible Next';
+}
+
+@font-face {
+  font-style: italic;
+  font-weight: 400;
+  src: url('../assets/fonts/AtkinsonHyperlegibleNext-RegularItalic.woff2')
+    format('woff2');
+  font-family: 'Atkinson Hyperlegible Next';
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  src: url('../assets/fonts/AtkinsonHyperlegibleNext-Bold.woff2')
+    format('woff2');
+  font-family: 'Atkinson Hyperlegible Next';
+}
+
+@font-face {
+  font-style: italic;
+  font-weight: 700;
+  src: url('../assets/fonts/AtkinsonHyperlegibleNext-BoldItalic.woff2')
+    format('woff2');
+  font-family: 'Atkinson Hyperlegible Next';
+}
+
 /*
 ==========================================================================
   TOKENS / Variables de design
@@ -14,22 +47,35 @@
 */
 
 :root {
-  /* Couleur de fond de la page/slide */
+  /* Couleurs */
   --marpup-color-background: #faf9f6;
-  /* Couleur du texte par défaut */
   --marpup-color-foreground: #202020;
-  /* Couleur du texte accentué (pzr défaut : titres) */
   --marpup-color-primary: #7c3f58;
-  /* Couleur du texte adoucie (par défaut : entêtes) */
   --marpup-color-muted: #626262;
 
-  /* Police des titres */
-  --marpup-font-heading: system-ui, sans-serif;
-  /* Police du corps de texte */
-  --marpup-font-body: system-ui, sans-serif;
+  /* Typographie */
+  --marpup-font-heading: 'Atkinson Hyperlegible Next', Arial, sans-serif;
+  --marpup-font-body: 'Atkinson Hyperlegible Next', Arial, sans-serif;
+  --marpup-font-size: 30px;
+  --marpup-font-size-header: 18px;
+  --marpup-font-size-footer: 18px;
+  --marpup-font-size-page-number: 18px;
+  --marpup-font-size-h1: 2.2em;
+  --marpup-font-size-h2: 1.7em;
 
-  /* Marges intérieures de la page/slide */
+  /* Structure de la slide */
   --marpup-slide-padding: 64px;
+  --marpup-header-height: 64px;
+  --marpup-footer-height: 64px;
+  --marpup-content-gap: 24px;
+
+  /* Citations */
+  --marpup-blockquote-border-width: 0.2em;
+  --marpup-blockquote-padding-left: 1em;
+
+  /* Médias */
+  --marpup-media-gap: 1rem;
+  --marpup-media-margin-block: 0.25rem;
 }
 
 /*
@@ -41,11 +87,6 @@
 
 /* Page/slide par défaut */
 section {
-  --marpup-header-height: 64px;
-  --marpup-footer-height: 64px;
-  --marpup-slide-padding: 64px;
-  --marpup-content-gap: 24px;
-
   display: flex;
   flex-direction: column;
   background: var(--marpup-color-background);
@@ -53,7 +94,7 @@ section {
     var(--marpup-slide-padding)
     calc(var(--marpup-footer-height) + var(--marpup-content-gap));
   color: var(--marpup-color-foreground);
-  font-size: 30px;
+  font-size: var(--marpup-font-size);
   font-family: var(--marpup-font-body);
 }
 
@@ -67,7 +108,7 @@ section::after {
   z-index: 11;
   padding: 0;
   height: var(--marpup-footer-height);
-  font-size: 18px;
+  font-size: var(--marpup-font-size-page-number);
 }
 
 /* Entête et pied de page par défaut */
@@ -109,12 +150,12 @@ h3 {
 
 /* Titre de niveau 1 par défaut */
 h1 {
-  font-size: 2.2em;
+  font-size: var(--marpup-font-size-h1);
 }
 
 /* Titre de niveau 2 par défaut */
 h2 {
-  font-size: 1.7em;
+  font-size: var(--marpup-font-size-h2);
 }
 
 /* Ancre/lien par défaut */
@@ -130,8 +171,9 @@ img {
 
 /* Bloc de citation par défaut */
 blockquote {
-  border-left: 0.2em solid var(--marpup-color-primary);
-  padding-left: 1em;
+  border-left: var(--marpup-blockquote-border-width) solid
+    var(--marpup-color-primary);
+  padding-left: var(--marpup-blockquote-padding-left);
 }
 
 /*
@@ -145,7 +187,7 @@ blockquote {
 section > p:has(> img:only-child) {
   flex: 1 1 0;
   margin-bottom: 0;
-  margin-block: 0.25rem;
+  margin-block: var(--marpup-media-margin-block);
   min-height: 0;
 }
 
