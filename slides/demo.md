@@ -9,6 +9,32 @@ header: Exemple d'entête
 footer: Exemple de pied de page
 ---
 
+<!-- Repères philosophiques -->
+<script src="./assets/philosophy/reperes-data.js"></script>
+<script src="./assets/philosophy/reperes.js" defer></script>
+
+<!-- Notions philosophiques -->
+<script src="./assets/philosophy/notions-data.js"></script>
+<script src="./assets/philosophy/notions.js" defer></script>
+
+# La liberté
+
+Être <button type="button" class="marpup-notion" data-notion="liberte">libre</button> signifie-t-il pouvoir faire tout ce que l'on veut ?
+
+Cette question suppose également de réfléchir au <button type="button" class="marpup-notion" data-notion="devoir">devoir</button>
+et à la <button type="button" class="marpup-notion" data-notion="justice">justice</button>.
+
+---
+
+# Démonstration
+
+Tout être humain est mortel.
+
+Cette proposition prétend donc à une portée
+<button type="button" class="marpup-repere" data-repere="universel">universelle</button>.
+
+---
+
 # Titre de niveau 1
 
 ## Titre de niveau 2

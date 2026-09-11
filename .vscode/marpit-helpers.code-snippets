@@ -1,0 +1,36 @@
+{
+  "Insère image à gauche": {
+    "scope": "markdown",
+    "prefix": "!image-gauche",
+    "body": ["<!-- _class: image-left -->", ""],
+    "description": "Marpup : Image à gauche",
+  },
+
+  "Insère image à droite": {
+    "scope": "markdown",
+    "prefix": "!image-droite",
+    "body": ["<!-- _class: image-right -->", ""],
+    "description": "Marpup : Image à droite",
+  },
+
+  "Insère 2 images": {
+    "scope": "markdown",
+    "prefix": "!images-2",
+    "body": ["<!-- _class: images-2 -->", ""],
+    "description": "Marpup : 2 images en vis-à-vis",
+  },
+
+  "Insère 3 images": {
+    "scope": "markdown",
+    "prefix": "!images-3",
+    "body": ["<!-- _class: images-3 -->", ""],
+    "description": "Marpup : 3 images en vis-à-vis",
+  },
+
+  "Insère 4 images": {
+    "scope": "markdown",
+    "prefix": "!images-4",
+    "body": ["<!-- _class: images-4 -->", ""],
+    "description": "Marpup : 4 images sur 2 colonnes",
+  },
+}

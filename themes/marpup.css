@@ -4,46 +4,46 @@
 */
 
 /* Import des styles par défaut de Marp - NE PAS TOUCHER ! */
-@import 'default';
+@import "default";
 
 /* Import des polices personnalisées */
 @font-face {
   font-style: normal;
   font-weight: 400;
-  src: url('../slides/assets/fonts/AtkinsonHyperlegibleNext-Regular.woff2')
-    format('woff2');
-  font-family: 'Atkinson Hyperlegible Next';
+  src: url("../slides/assets/fonts/AtkinsonHyperlegibleNext-Regular.woff2")
+    format("woff2");
+  font-family: "Atkinson Hyperlegible Next";
 }
 
 @font-face {
   font-style: italic;
   font-weight: 400;
-  src: url('../slides/assets/fonts/AtkinsonHyperlegibleNext-RegularItalic.woff2')
-    format('woff2');
-  font-family: 'Atkinson Hyperlegible Next';
+  src: url("../slides/assets/fonts/AtkinsonHyperlegibleNext-RegularItalic.woff2")
+    format("woff2");
+  font-family: "Atkinson Hyperlegible Next";
 }
 
 @font-face {
   font-style: normal;
   font-weight: 700;
-  src: url('../slides/assets/fonts/AtkinsonHyperlegibleNext-Bold.woff2')
-    format('woff2');
-  font-family: 'Atkinson Hyperlegible Next';
+  src: url("../slides/assets/fonts/AtkinsonHyperlegibleNext-Bold.woff2")
+    format("woff2");
+  font-family: "Atkinson Hyperlegible Next";
 }
 
 @font-face {
   font-style: italic;
   font-weight: 700;
-  src: url('../slides/assets/fonts/AtkinsonHyperlegibleNext-BoldItalic.woff2')
-    format('woff2');
-  font-family: 'Atkinson Hyperlegible Next';
+  src: url("../slides/assets/fonts/AtkinsonHyperlegibleNext-BoldItalic.woff2")
+    format("woff2");
+  font-family: "Atkinson Hyperlegible Next";
 }
 
 /*
-==========================================================================
+================================================================
   TOKENS / Variables de design
   (personnalisable)
-==========================================================================
+================================================================
 */
 
 :root {
@@ -54,14 +54,16 @@
   --marpup-color-muted: #626262;
 
   /* Typographie */
-  --marpup-font-heading: 'Atkinson Hyperlegible Next', Arial, sans-serif;
-  --marpup-font-body: 'Atkinson Hyperlegible Next', Arial, sans-serif;
+  --marpup-font-heading: "Atkinson Hyperlegible Next", Arial, sans-serif;
+  --marpup-font-body: "Atkinson Hyperlegible Next", Arial, sans-serif;
   --marpup-font-size: 30px;
   --marpup-font-size-header: 18px;
   --marpup-font-size-footer: 18px;
   --marpup-font-size-page-number: 18px;
   --marpup-font-size-h1: 2.2em;
   --marpup-font-size-h2: 1.7em;
+  --marpup-font-size-h3: 1.4em;
+  --marpup-paragraph-margin-bottom: 2px;
 
   /* Structure de la slide */
   --marpup-slide-padding: 64px;
@@ -76,18 +78,29 @@
   /* Médias */
   --marpup-media-gap: 1rem;
   --marpup-media-margin-block: 0.25rem;
+
+  /* Repères philosophiques */
+  --marpup-color-repere: #245ea8;
+  --marpup-color-repere-hover: #1c4b88;
+  --marpup-repere-dialog-width: 720px;
+
+  /* Notions philosophiques */
+  --marpup-color-notion: #245ea8;
+  --marpup-color-notion-hover: #1c4b88;
+  --marpup-notion-dialog-width: 720px;
 }
 
 /*
-==========================================================================
+================================================================
   CORE / Styles par défaut du thème
   (personnalisation non recommandée)
-==========================================================================
+================================================================
 */
 
 /* Page/slide par défaut */
 section {
   display: flex;
+  position: relative;
   flex-direction: column;
   background: var(--marpup-color-background);
   padding: calc(var(--marpup-header-height) + var(--marpup-content-gap))
@@ -158,6 +171,18 @@ h2 {
   font-size: var(--marpup-font-size-h2);
 }
 
+/* Paragraphes et éléments de liste */
+p,
+li {
+  line-height: 1.35;
+  letter-spacing: 0.01em;
+}
+
+/* Paragraphes par défaut */
+p {
+  margin-bottom: var(--marpup-paragraph-margin-bottom);
+}
+
 /* Ancre/lien par défaut */
 a {
   color: var(--marpup-color-primary);
@@ -177,10 +202,10 @@ blockquote {
 }
 
 /*
-==========================================================================
+================================================================
   MEDIA / Styles custom des media du thème
   (personnalisation non recommandée)
-==========================================================================
+================================================================
 */
 
 /* Conteneur d'une image seule */
@@ -252,4 +277,159 @@ section.images-3 > p:has(> img) {
 section.images-4 > p:has(> img) {
   grid-template-rows: repeat(2, minmax(0, 1fr));
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/*
+================================================================
+  REPERES & NOTIONS / Styles par défaut du module philosophique
+  (personnalisation non recommandée)
+================================================================
+*/
+
+/* Repère ou notion inséré dans le texte */
+:is(.marpup-repere, .marpup-notion) {
+  display: inline !important;
+  vertical-align: baseline;
+  appearance: none;
+  cursor: pointer;
+  margin: 0;
+  background: transparent;
+  padding-block: 0;
+  font: inherit;
+  font-weight: 700;
+  line-height: inherit;
+}
+
+/* Repère interactif */
+.marpup-repere {
+  border: 0;
+  padding: 0;
+  color: var(--marpup-color-repere);
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.12em;
+}
+
+/* Notion interactive */
+.marpup-notion {
+  border: 2px solid var(--marpup-color-notion);
+  border-radius: 48px;
+  padding-inline: 16px;
+  color: var(--marpup-color-notion);
+}
+
+/* Effet au survol des repères */
+.marpup-repere:hover {
+  color: var(--marpup-color-repere-hover);
+}
+
+/* Effet au survol des notions */
+.marpup-notion:hover {
+  color: var(--marpup-color-notion-hover);
+}
+
+/* Effet au focus des repères et notions */
+:is(.marpup-repere, .marpup-notion):focus-visible {
+  outline: 0.1em solid currentColor;
+  outline-offset: 0.12em;
+  border-radius: 0.1em;
+}
+
+/* Fenêtre de définition */
+:is(.marpup-repere-dialog, .marpup-notion-dialog) {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  border-radius: 0.5rem;
+  background: var(--marpup-color-background);
+  padding: clamp(0.5rem, 2vw, 1.5rem);
+  width: min(var(--marpup-repere-dialog-width), calc(100% - 4rem));
+  max-width: none;
+  max-height: calc(100% - 4rem);
+  overflow: auto;
+  color: var(--marpup-color-foreground);
+  font-size: 0.8em;
+  font-family: var(--marpup-font-body);
+}
+
+/* Fenêtre de définition : arrière-plan du dialogue */
+:is(.marpup-repere-dialog, .marpup-notion-dialog)::backdrop {
+  background: rgb(0 0 0 / 55%);
+}
+
+/* Fenêtre de définition : en-tête du dialogue */
+:is(.marpup-repere-dialog__header, .marpup-notion-dialog__header) {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Fenêtre de définition : groupe du dialogue */
+:is(.marpup-repere-dialog__group, .marpup-notion-dialog__group) {
+  margin: 0 0 0.25rem;
+  color: var(--marpup-color-muted);
+  font-size: 0.65em;
+}
+
+/* Fenêtre de définition : titre du dialogue */
+:is(.marpup-repere-dialog__title, .marpup-notion-dialog__title) {
+  margin: 0;
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
+  font-family: var(--marpup-font-heading);
+}
+
+/* Fenêtre de définition : titre du repère */
+.marpup-repere-dialog__title {
+  color: var(--marpup-color-repere);
+}
+
+/* Fenêtre de définition : titre de la notion */
+.marpup-notion-dialog__title {
+  color: var(--marpup-color-notion);
+}
+/* Fenêtre de définition : définition du dialogue */
+:is(.marpup-repere-dialog__definition, .marpup-notion-dialog__definition) {
+  margin: 0;
+}
+
+/* Fenêtre de définition : bouton de fermeture du dialogue */
+:is(.marpup-repere-dialog__close, .marpup-notion-dialog__close) {
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  appearance: none;
+  cursor: pointer;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  padding: 0;
+  width: 1.5em;
+  height: 1.5em;
+  color: var(--marpup-color-foreground);
+  font: inherit;
+  font-size: 1.2em;
+  line-height: 1;
+}
+
+/* Fenêtre de définition : bouton de fermeture du dialogue au survol */
+:is(.marpup-repere-dialog__close, .marpup-notion-dialog__close):hover {
+  background: rgb(0 0 0 / 8%);
+}
+
+/* Fenêtre de définition : bouton de fermeture du dialogue au focus pour le repère */
+.marpup-repere-dialog__close:focus-visible {
+  outline: 0.1em solid var(--marpup-color-repere);
+  outline-offset: 0.1em;
+}
+
+/* Fenêtre de définition : bouton de fermeture du dialogue au focus pour la notion */
+.marpup-notion-dialog__close:focus-visible {
+  outline: 0.1em solid var(--marpup-color-notion);
+  outline-offset: 0.1em;
 }

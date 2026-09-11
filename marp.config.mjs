@@ -1,8 +1,9 @@
 /** @type {import('@marp-team/marp-cli').Config} */
 const config = {
-  inputDir: './slides',
+  inputDir: "./slides",
   allowLocalFiles: true,
-  themeSet: './themes',
+  themeSet: "./themes",
+  html: true,
 };
 
 export default config;

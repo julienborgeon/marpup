@@ -1,0 +1,62 @@
+{
+  "Crée un template": {
+    "scope": "markdown",
+    "prefix": "/template",
+    "body": [
+      "---",
+      "marp: true",
+      "theme: marpup",
+      "size: 16:9",
+      "title: ${1:Titre}",
+      "author: ${2:Auteur}",
+      "paginate: true",
+      "header: ${3:}",
+      "footer: ${4:}",
+      "---",
+      "",
+      "",
+      "<!-- Repères philosophiques -->",
+      "<script src=\"./assets/philosophy/reperes-data.js\"></script>",
+      "<script src=\"./assets/philosophy/reperes.js\" defer></script>",
+      "",
+      "<!-- Notions philosophiques -->",
+      "<script src=\"./assets/philosophy/notions-data.js\"></script>",
+      "<script src=\"./assets/philosophy/notions.js\" defer></script>",
+      "",
+      "# ${1:Titre}",
+      "",
+      "${5:Sous-titre}",
+      "",
+      "---",
+      "",
+      "$0",
+    ],
+    "description": "Marpup : Nouveau diaporama",
+  },
+
+  "Ajoute une slide": {
+    "scope": "markdown",
+    "prefix": "/slide",
+    "body": ["", "---", "", "## ${1:Titre}", "", "$0"],
+    "description": "Marpup : Nouvelle slide",
+  },
+
+  "Insère un tableau": {
+    "scope": "markdown",
+    "prefix": "/table",
+    "body": [
+      "| ${1:Colonne 1} | ${2:Colonne 2} |",
+      "| --- | --- |",
+      "| ${3:Valeur} | ${4:Valeur} |",
+      "$0",
+    ],
+    "description": "Marpup : Tableau Markdown",
+  },
+
+  "Insère une image locale": {
+    "scope": "markdown",
+    "prefix": "/image",
+    "body": ["![${1:Description}](./assets/images/${2:image.jpg})$0"],
+    "description": "Marpup : Image locale",
+  },
+}
