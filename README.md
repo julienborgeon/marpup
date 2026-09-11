@@ -34,6 +34,7 @@ origin  https://github.com/julienborgeon/marpup.git (push)
 
 - Initialiser le projet avec `npm ci` (cela installera toutes les dépendances nécessaires, y compris celles listées dans le fichier `package-lock.json`)
 - Lancer `npx marp --version` pour vérifier que Marp est correctement installé (cela affichera la version de Marp installée)
+- Bonus : installer l'extension [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) pour une meilleure expérience Markdown dans VSC
 
 ---
 
@@ -73,6 +74,7 @@ marpup/
 
 ## Spécificité de MarpUp par rapport à Marp
 
+- La police custom "Atkinson Hyperlegible Next" utilisée pour les titres et le corps du texte n'est pas prévisualisable pendant la prévisualisation native de Marp mais seulement après le rendu final.
 - Les fonctionnalités associées à l'intégration des notions et repères dans les slides dépendent du navigateur pour l'affichage et l'interaction avec les définitions. Autrement dit, la fonction de prévisualisation native de Marp ne permet pas de tester correctement ces fonctionnalités.
 - Pour prévisualiser en live les modifications apportées aux slides, il faut lancer la commande suivante :
 

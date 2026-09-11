@@ -106,7 +106,7 @@ window.MARPUP_REPERES = {
     terme: "Accidentel",
     groupe: "Essentiel / accidentel",
     definition:
-      "Est accidentel tout ce qui n'appartient à pas à l'essence d'une chose ; ce qui peut être ou ne pas être sans que cela ne change le sujet. Ce ne sont pas des propriétés indispensables.",
+      "Est accidentel tout ce qui n'appartient pas à l'essence d'une chose ; ce qui peut être ou ne pas être sans que cela ne change le sujet. Ce ne sont pas des propriétés indispensables.",
   },
 
   exemple: {
@@ -357,7 +357,7 @@ window.MARPUP_REPERES = {
     terme: "Fin",
     groupe: "Principe / cause / fin",
     definition:
-      "Chronologiquement, une fin ce qui termine un processus. Logiquement ou moralement, une fin est ce qui guide un processus : ce en vertu de quoi il se déploie. « Fin », en ce sens, est un synonyme de « but » ou « idéal » de l'action.",
+      "Chronologiquement, une fin est ce qui termine un processus. Logiquement ou moralement, une fin est ce qui guide un processus : ce en vertu de quoi il se déploie. « Fin », en ce sens, est un synonyme de « but » ou « idéal » de l'action.",
   },
 
   public: {
@@ -453,6 +453,6 @@ window.MARPUP_REPERES = {
     terme: "Certain",
     groupe: "Vrai / probable / certain",
     definition:
-      "La certitude est le sentiment / la conscience de connaître la vérité. On connaît les raisons de la vérité d'une proposition : on peut en faire la démonstration. le certain relève du domaine du savoir.",
+      "La certitude est le sentiment / la conscience de connaître la vérité. On connaît les raisons de la vérité d'une proposition : on peut en faire la démonstration. Le certain relève du domaine du savoir.",
   },
 };
