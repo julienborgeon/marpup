@@ -10,7 +10,7 @@
 @font-face {
   font-style: normal;
   font-weight: 400;
-  src: url('../assets/fonts/AtkinsonHyperlegibleNext-Regular.woff2')
+  src: url('../slides/assets/fonts/AtkinsonHyperlegibleNext-Regular.woff2')
     format('woff2');
   font-family: 'Atkinson Hyperlegible Next';
 }
@@ -18,7 +18,7 @@
 @font-face {
   font-style: italic;
   font-weight: 400;
-  src: url('../assets/fonts/AtkinsonHyperlegibleNext-RegularItalic.woff2')
+  src: url('../slides/assets/fonts/AtkinsonHyperlegibleNext-RegularItalic.woff2')
     format('woff2');
   font-family: 'Atkinson Hyperlegible Next';
 }
@@ -26,7 +26,7 @@
 @font-face {
   font-style: normal;
   font-weight: 700;
-  src: url('../assets/fonts/AtkinsonHyperlegibleNext-Bold.woff2')
+  src: url('../slides/assets/fonts/AtkinsonHyperlegibleNext-Bold.woff2')
     format('woff2');
   font-family: 'Atkinson Hyperlegible Next';
 }
@@ -34,7 +34,7 @@
 @font-face {
   font-style: italic;
   font-weight: 700;
-  src: url('../assets/fonts/AtkinsonHyperlegibleNext-BoldItalic.woff2')
+  src: url('../slides/assets/fonts/AtkinsonHyperlegibleNext-BoldItalic.woff2')
     format('woff2');
   font-family: 'Atkinson Hyperlegible Next';
 }

@@ -45,7 +45,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tellus leo, c
 
 ## Slide 3 - image par défaut
 
-![Description](../assets/images/zelda-bed-chill.jpg)
+![Description](./assets/images/zelda-bed-chill.jpg)
 
 ---
 
@@ -53,7 +53,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tellus leo, c
 
 ## Slide 4 - image à gauche
 
-![Description](../assets/images/zelda-bed-chill.jpg)
+![Description](./assets/images/zelda-bed-chill.jpg)
 
 ---
 
@@ -61,7 +61,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tellus leo, c
 
 ## Slide 5 - image à droite
 
-![Description](../assets/images/zelda-bed-chill.jpg)
+![Description](./assets/images/zelda-bed-chill.jpg)
 
 ---
 
@@ -69,8 +69,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tellus leo, c
 
 ## Slide 6 - 2 images
 
-![Description](../assets/images/zelda-bed-chill.jpg)
-![Description](../assets/images/zelda-school-chill.jpg)
+![Description](./assets/images/zelda-bed-chill.jpg)
+![Description](./assets/images/zelda-school-chill.jpg)
 
 ---
 
@@ -78,9 +78,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tellus leo, c
 
 ## Slide 7 - 3 images
 
-![Description](../assets/images/zelda-bed-chill.jpg)
-![Description](../assets/images/zelda-school-chill.jpg)
-![Description](../assets/images/zelda-sun-chill.jpg)
+![Description](./assets/images/zelda-bed-chill.jpg)
+![Description](./assets/images/zelda-school-chill.jpg)
+![Description](./assets/images/zelda-sun-chill.jpg)
 
 ---
 
@@ -88,7 +88,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tellus leo, c
 
 ## Slide 8 - 4 images
 
-![Description](../assets/images/zelda-bed-chill.jpg)
-![Description](../assets/images/zelda-school-chill.jpg)
-![Description](../assets/images/zelda-sun-chill.jpg)
-![Description](../assets/images/zelda-weird-chill.jpg)
+![Description](./assets/images/zelda-bed-chill.jpg)
+![Description](./assets/images/zelda-school-chill.jpg)
+![Description](./assets/images/zelda-sun-chill.jpg)
+![Description](./assets/images/zelda-weird-chill.jpg)

@@ -47,7 +47,7 @@
   "Insère une image locale": {
     "scope": "markdown",
     "prefix": "up-image",
-    "body": ["![${1:Description}](../assets/images/${2:image.jpg})$0"],
+    "body": ["![${1:Description}](./assets/images/${2:image.jpg})$0"],
     "description": "Insère une image locale",
   },
 
