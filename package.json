@@ -5,9 +5,10 @@
   "scripts": {
     "dev": "marp --server ./slides",
     "build": "npm run build:html",
-    "build:html": "marp --output ./dist",
+    "build:html": "marp --output ./dist && npm run copy:assets",
     "build:pdf": "marp --output ./dist --pdf",
-    "build:pptx": "marp --output ./dist --pptx"
+    "build:pptx": "marp --output ./dist --pptx",
+    "copy:assets": "node -e \"require('fs').cpSync('slides/assets','dist/assets',{recursive:true})\""
   },
   "keywords": [
     "marp",

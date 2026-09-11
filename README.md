@@ -55,7 +55,7 @@ marpup/
 - Toujours vérifier les changements dans le fichier `dist/` après avoir modifié les slides ou les thèmes.
 - Le fichier de snippet est tout à fait extensible et personnalisable, tu peux y ajouter tes propres snippets selon tes besoins.
 - Les thèmes CSS dans le dossier `themes/` peuvent également être modifiés ou étendus pour personnaliser l'apparence des slides.
-- Les fichiers dans le dossier `assets/` peuvent être ajoutés ou modifiés pour inclure de nouvelles ressources comme des polices, images ou vidéos.
+- Les fichiers dans le dossier `slides/assets/` peuvent être ajoutés ou modifiés pour inclure de nouvelles ressources comme des polices, images ou vidéos.
 
 ---
 
