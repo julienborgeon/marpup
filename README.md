@@ -30,14 +30,14 @@ marpup/
 ├─ .vscode/
 │  └─ marpup.code-snippets  # tous les snippets du projet
 │  └─ settings.json         # configuration spécifique à VSC pour ce projet
-├─ assets/                  # ressources du projet (polices, images, videos, etc.)
-│  └─ fonts/                # police d'écriture du projet
-│  └─ images/               # images utilisées dans le projet
 ├─ dist/                    # fichiers générés (PDF, PPTX, HTML)
 ├─ examples/                # exemples de slides ou de configurations
 ├─ node_modules/            # répertoire des modules npm installés
 ├─ package.json             # fichier de configuration npm
 ├─ slides/                  # slides du projet
+│  └─ assets/               # ressources/media des slides
+│     └─ fonts/             # police d'écriture du projet
+│     └─ images/            # images utilisées dans les slides
 │  └─ demo.md               # exemple de slide complète
 ├─ themes/                  # thèmes CSS pour Marp
 │  └─ marpup.css            # thème marpup
@@ -74,7 +74,7 @@ up-image
 Insère automatiquement :
 
 ```markdown
-![Description](../assets/images/zelda-bed-chill.jpg)
+![Description](./assets/images/zelda-bed-chill.jpg)
 ```
 
 2. Pour les snippets "marp core", utilisés pour ajouter des classes aux sections/slides, le préfixe est `@`. Exemple :
