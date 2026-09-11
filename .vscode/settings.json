@@ -1,5 +1,6 @@
 {
   "markdown.marp.themes": ["./themes/marpup.css"],
+  "markdown.marp.html": "all",
 
   "sortcss.sortOnSave": true,
   "sortcss.sortingStrategy": "concentric-css",
@@ -31,5 +32,10 @@
       "comments": "off",
       "strings": "off"
     }
+  },
+
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
   }
 }

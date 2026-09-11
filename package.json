@@ -5,10 +5,11 @@
   "scripts": {
     "dev": "marp --server ./slides",
     "build": "npm run build:html",
+    "copy:assets": "node ./scripts/copy-slide-assets.mjs",
     "build:html": "marp --output ./dist && npm run copy:assets",
     "build:pdf": "marp --output ./dist --pdf",
     "build:pptx": "marp --output ./dist --pptx",
-    "copy:assets": "node -e \"require('fs').cpSync('slides/assets','dist/assets',{recursive:true})\""
+    "format": "prettier --write \"**/*.{js,mjs,cjs}\""
   },
   "keywords": [
     "marp",
@@ -20,6 +21,7 @@
   "author": "Julien Borgeon",
   "license": "MIT",
   "devDependencies": {
-    "@marp-team/marp-cli": "^4.5.1"
+    "@marp-team/marp-cli": "^4.5.1",
+    "prettier": "^3.3.3"
   }
 }

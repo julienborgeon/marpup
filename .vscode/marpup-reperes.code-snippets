@@ -1,0 +1,640 @@
+{
+  "Repère — Absolu": {
+    "scope": "markdown",
+    "prefix": "@absolu",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"absolu\">${1:absolu}</button>$0",
+    ],
+    "description": "Repère philosophique : Absolu",
+  },
+
+  "Repère — Relatif": {
+    "scope": "markdown",
+    "prefix": "@relatif",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"relatif\">${1:relatif}</button>$0",
+    ],
+    "description": "Repère philosophique : Relatif",
+  },
+
+  "Repère — Abstrait": {
+    "scope": "markdown",
+    "prefix": "@abstrait",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"abstrait\">${1:abstrait}</button>$0",
+    ],
+    "description": "Repère philosophique : Abstrait",
+  },
+
+  "Repère — Concret": {
+    "scope": "markdown",
+    "prefix": "@concret",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"concret\">${1:concret}</button>$0",
+    ],
+    "description": "Repère philosophique : Concret",
+  },
+
+  "Repère — En acte": {
+    "scope": "markdown",
+    "prefix": "@en-acte",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"en-acte\">${1:en acte}</button>$0",
+    ],
+    "description": "Repère philosophique : En acte",
+  },
+
+  "Repère — En puissance": {
+    "scope": "markdown",
+    "prefix": "@en-puissance",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"en-puissance\">${1:en puissance}</button>$0",
+    ],
+    "description": "Repère philosophique : En puissance",
+  },
+
+  "Repère — Analyse": {
+    "scope": "markdown",
+    "prefix": "@analyse",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"analyse\">${1:analyse}</button>$0",
+    ],
+    "description": "Repère philosophique : Analyse",
+  },
+
+  "Repère — Synthèse": {
+    "scope": "markdown",
+    "prefix": "@synthese",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"synthese\">${1:synthèse}</button>$0",
+    ],
+    "description": "Repère philosophique : Synthèse",
+  },
+
+  "Repère — Concept": {
+    "scope": "markdown",
+    "prefix": "@concept",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"concept\">${1:concept}</button>$0",
+    ],
+    "description": "Repère philosophique : Concept",
+  },
+
+  "Repère — Image": {
+    "scope": "markdown",
+    "prefix": "@image-repere",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"image\">${1:image}</button>$0",
+    ],
+    "description": "Repère philosophique : Image",
+  },
+
+  "Repère — Métaphore": {
+    "scope": "markdown",
+    "prefix": "@metaphore",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"metaphore\">${1:métaphore}</button>$0",
+    ],
+    "description": "Repère philosophique : Métaphore",
+  },
+
+  "Repère — Contingent": {
+    "scope": "markdown",
+    "prefix": "@contingent",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"contingent\">${1:contingent}</button>$0",
+    ],
+    "description": "Repère philosophique : Contingent",
+  },
+
+  "Repère — Nécessaire": {
+    "scope": "markdown",
+    "prefix": "@necessaire",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"necessaire\">${1:nécessaire}</button>$0",
+    ],
+    "description": "Repère philosophique : Nécessaire",
+  },
+
+  "Repère — Croire": {
+    "scope": "markdown",
+    "prefix": "@croire",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"croire\">${1:croire}</button>$0",
+    ],
+    "description": "Repère philosophique : Croire",
+  },
+
+  "Repère — Savoir": {
+    "scope": "markdown",
+    "prefix": "@savoir",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"savoir\">${1:savoir}</button>$0",
+    ],
+    "description": "Repère philosophique : Savoir",
+  },
+
+  "Repère — Essentiel": {
+    "scope": "markdown",
+    "prefix": "@essentiel",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"essentiel\">${1:essentiel}</button>$0",
+    ],
+    "description": "Repère philosophique : Essentiel",
+  },
+
+  "Repère — Accidentel": {
+    "scope": "markdown",
+    "prefix": "@accidentel",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"accidentel\">${1:accidentel}</button>$0",
+    ],
+    "description": "Repère philosophique : Accidentel",
+  },
+
+  "Repère — Exemple": {
+    "scope": "markdown",
+    "prefix": "@exemple-repere",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"exemple\">${1:exemple}</button>$0",
+    ],
+    "description": "Repère philosophique : Exemple",
+  },
+
+  "Repère — Preuve": {
+    "scope": "markdown",
+    "prefix": "@preuve",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"preuve\">${1:preuve}</button>$0",
+    ],
+    "description": "Repère philosophique : Preuve",
+  },
+
+  "Repère — Expliquer": {
+    "scope": "markdown",
+    "prefix": "@expliquer",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"expliquer\">${1:expliquer}</button>$0",
+    ],
+    "description": "Repère philosophique : Expliquer",
+  },
+
+  "Repère — Comprendre": {
+    "scope": "markdown",
+    "prefix": "@comprendre",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"comprendre\">${1:comprendre}</button>$0",
+    ],
+    "description": "Repère philosophique : Comprendre",
+  },
+
+  "Repère — En fait": {
+    "scope": "markdown",
+    "prefix": "@en-fait",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"en-fait\">${1:en fait}</button>$0",
+    ],
+    "description": "Repère philosophique : En fait",
+  },
+
+  "Repère — En droit": {
+    "scope": "markdown",
+    "prefix": "@en-droit",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"en-droit\">${1:en droit}</button>$0",
+    ],
+    "description": "Repère philosophique : En droit",
+  },
+
+  "Repère — Formel": {
+    "scope": "markdown",
+    "prefix": "@formel",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"formel\">${1:formel}</button>$0",
+    ],
+    "description": "Repère philosophique : Formel",
+  },
+
+  "Repère — Matériel": {
+    "scope": "markdown",
+    "prefix": "@materiel",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"materiel\">${1:matériel}</button>$0",
+    ],
+    "description": "Repère philosophique : Matériel",
+  },
+
+  "Repère — Genre": {
+    "scope": "markdown",
+    "prefix": "@genre",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"genre\">${1:genre}</button>$0",
+    ],
+    "description": "Repère philosophique : Genre",
+  },
+
+  "Repère — Espèce": {
+    "scope": "markdown",
+    "prefix": "@espece",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"espece\">${1:espèce}</button>$0",
+    ],
+    "description": "Repère philosophique : Espèce",
+  },
+
+  "Repère — Individu": {
+    "scope": "markdown",
+    "prefix": "@individu",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"individu\">${1:individu}</button>$0",
+    ],
+    "description": "Repère philosophique : Individu",
+  },
+
+  "Repère — Hypothèse": {
+    "scope": "markdown",
+    "prefix": "@hypothese",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"hypothese\">${1:hypothèse}</button>$0",
+    ],
+    "description": "Repère philosophique : Hypothèse",
+  },
+
+  "Repère — Conséquence": {
+    "scope": "markdown",
+    "prefix": "@consequence",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"consequence\">${1:conséquence}</button>$0",
+    ],
+    "description": "Repère philosophique : Conséquence",
+  },
+
+  "Repère — Conclusion": {
+    "scope": "markdown",
+    "prefix": "@conclusion",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"conclusion\">${1:conclusion}</button>$0",
+    ],
+    "description": "Repère philosophique : Conclusion",
+  },
+
+  "Repère — Idéal": {
+    "scope": "markdown",
+    "prefix": "@ideal",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"ideal\">${1:idéal}</button>$0",
+    ],
+    "description": "Repère philosophique : Idéal",
+  },
+
+  "Repère — Réel": {
+    "scope": "markdown",
+    "prefix": "@reel",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"reel\">${1:réel}</button>$0",
+    ],
+    "description": "Repère philosophique : Réel",
+  },
+
+  "Repère — Identité": {
+    "scope": "markdown",
+    "prefix": "@identite",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"identite\">${1:identité}</button>$0",
+    ],
+    "description": "Repère philosophique : Identité",
+  },
+
+  "Repère — Égalité": {
+    "scope": "markdown",
+    "prefix": "@egalite",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"egalite\">${1:égalité}</button>$0",
+    ],
+    "description": "Repère philosophique : Égalité",
+  },
+
+  "Repère — Différence": {
+    "scope": "markdown",
+    "prefix": "@difference",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"difference\">${1:différence}</button>$0",
+    ],
+    "description": "Repère philosophique : Différence",
+  },
+
+  "Repère — Impossible": {
+    "scope": "markdown",
+    "prefix": "@impossible",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"impossible\">${1:impossible}</button>$0",
+    ],
+    "description": "Repère philosophique : Impossible",
+  },
+
+  "Repère — Possible": {
+    "scope": "markdown",
+    "prefix": "@possible",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"possible\">${1:possible}</button>$0",
+    ],
+    "description": "Repère philosophique : Possible",
+  },
+
+  "Repère — Intuitif": {
+    "scope": "markdown",
+    "prefix": "@intuitif",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"intuitif\">${1:intuitif}</button>$0",
+    ],
+    "description": "Repère philosophique : Intuitif",
+  },
+
+  "Repère — Discursif": {
+    "scope": "markdown",
+    "prefix": "@discursif",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"discursif\">${1:discursif}</button>$0",
+    ],
+    "description": "Repère philosophique : Discursif",
+  },
+
+  "Repère — Légal": {
+    "scope": "markdown",
+    "prefix": "@legal",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"legal\">${1:légal}</button>$0",
+    ],
+    "description": "Repère philosophique : Légal",
+  },
+
+  "Repère — Légitime": {
+    "scope": "markdown",
+    "prefix": "@legitime",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"legitime\">${1:légitime}</button>$0",
+    ],
+    "description": "Repère philosophique : Légitime",
+  },
+
+  "Repère — Médiat": {
+    "scope": "markdown",
+    "prefix": "@mediat",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"mediat\">${1:médiat}</button>$0",
+    ],
+    "description": "Repère philosophique : Médiat",
+  },
+
+  "Repère — Immédiat": {
+    "scope": "markdown",
+    "prefix": "@immediat",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"immediat\">${1:immédiat}</button>$0",
+    ],
+    "description": "Repère philosophique : Immédiat",
+  },
+
+  "Repère — Objectif": {
+    "scope": "markdown",
+    "prefix": "@objectif",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"objectif\">${1:objectif}</button>$0",
+    ],
+    "description": "Repère philosophique : Objectif",
+  },
+
+  "Repère — Subjectif": {
+    "scope": "markdown",
+    "prefix": "@subjectif",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"subjectif\">${1:subjectif}</button>$0",
+    ],
+    "description": "Repère philosophique : Subjectif",
+  },
+
+  "Repère — Intersubjectif": {
+    "scope": "markdown",
+    "prefix": "@intersubjectif",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"intersubjectif\">${1:intersubjectif}</button>$0",
+    ],
+    "description": "Repère philosophique : Intersubjectif",
+  },
+
+  "Repère — Obligation": {
+    "scope": "markdown",
+    "prefix": "@obligation",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"obligation\">${1:obligation}</button>$0",
+    ],
+    "description": "Repère philosophique : Obligation",
+  },
+
+  "Repère — Contrainte": {
+    "scope": "markdown",
+    "prefix": "@contrainte",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"contrainte\">${1:contrainte}</button>$0",
+    ],
+    "description": "Repère philosophique : Contrainte",
+  },
+
+  "Repère — Origine": {
+    "scope": "markdown",
+    "prefix": "@origine",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"origine\">${1:origine}</button>$0",
+    ],
+    "description": "Repère philosophique : Origine",
+  },
+
+  "Repère — Fondement": {
+    "scope": "markdown",
+    "prefix": "@fondement",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"fondement\">${1:fondement}</button>$0",
+    ],
+    "description": "Repère philosophique : Fondement",
+  },
+
+  "Repère — Persuader": {
+    "scope": "markdown",
+    "prefix": "@persuader",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"persuader\">${1:persuader}</button>$0",
+    ],
+    "description": "Repère philosophique : Persuader",
+  },
+
+  "Repère — Convaincre": {
+    "scope": "markdown",
+    "prefix": "@convaincre",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"convaincre\">${1:convaincre}</button>$0",
+    ],
+    "description": "Repère philosophique : Convaincre",
+  },
+
+  "Repère — Principe": {
+    "scope": "markdown",
+    "prefix": "@principe",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"principe\">${1:principe}</button>$0",
+    ],
+    "description": "Repère philosophique : Principe",
+  },
+
+  "Repère — Cause": {
+    "scope": "markdown",
+    "prefix": "@cause",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"cause\">${1:cause}</button>$0",
+    ],
+    "description": "Repère philosophique : Cause",
+  },
+
+  "Repère — Fin": {
+    "scope": "markdown",
+    "prefix": "@fin",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"fin\">${1:fin}</button>$0",
+    ],
+    "description": "Repère philosophique : Fin",
+  },
+
+  "Repère — Public": {
+    "scope": "markdown",
+    "prefix": "@public",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"public\">${1:public}</button>$0",
+    ],
+    "description": "Repère philosophique : Public",
+  },
+
+  "Repère — Privé": {
+    "scope": "markdown",
+    "prefix": "@prive",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"prive\">${1:privé}</button>$0",
+    ],
+    "description": "Repère philosophique : Privé",
+  },
+
+  "Repère — Ressemblance": {
+    "scope": "markdown",
+    "prefix": "@ressemblance",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"ressemblance\">${1:ressemblance}</button>$0",
+    ],
+    "description": "Repère philosophique : Ressemblance",
+  },
+
+  "Repère — Analogie": {
+    "scope": "markdown",
+    "prefix": "@analogie",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"analogie\">${1:analogie}</button>$0",
+    ],
+    "description": "Repère philosophique : Analogie",
+  },
+
+  "Repère — Théorie": {
+    "scope": "markdown",
+    "prefix": "@theorie",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"theorie\">${1:théorie}</button>$0",
+    ],
+    "description": "Repère philosophique : Théorie",
+  },
+
+  "Repère — Pratique": {
+    "scope": "markdown",
+    "prefix": "@pratique",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"pratique\">${1:pratique}</button>$0",
+    ],
+    "description": "Repère philosophique : Pratique",
+  },
+
+  "Repère — Transcendant": {
+    "scope": "markdown",
+    "prefix": "@transcendant",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"transcendant\">${1:transcendant}</button>$0",
+    ],
+    "description": "Repère philosophique : Transcendant",
+  },
+
+  "Repère — Immanent": {
+    "scope": "markdown",
+    "prefix": "@immanent",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"immanent\">${1:immanent}</button>$0",
+    ],
+    "description": "Repère philosophique : Immanent",
+  },
+
+  "Repère — Universel": {
+    "scope": "markdown",
+    "prefix": "@universel",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"universel\">${1:universel}</button>$0",
+    ],
+    "description": "Repère philosophique : Universel",
+  },
+
+  "Repère — Général": {
+    "scope": "markdown",
+    "prefix": "@general",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"general\">${1:général}</button>$0",
+    ],
+    "description": "Repère philosophique : Général",
+  },
+
+  "Repère — Particulier": {
+    "scope": "markdown",
+    "prefix": "@particulier",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"particulier\">${1:particulier}</button>$0",
+    ],
+    "description": "Repère philosophique : Particulier",
+  },
+
+  "Repère — Singulier": {
+    "scope": "markdown",
+    "prefix": "@singulier",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"singulier\">${1:singulier}</button>$0",
+    ],
+    "description": "Repère philosophique : Singulier",
+  },
+
+  "Repère — Vrai": {
+    "scope": "markdown",
+    "prefix": "@vrai",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"vrai\">${1:vrai}</button>$0",
+    ],
+    "description": "Repère philosophique : Vrai",
+  },
+
+  "Repère — Probable": {
+    "scope": "markdown",
+    "prefix": "@probable",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"probable\">${1:probable}</button>$0",
+    ],
+    "description": "Repère philosophique : Probable",
+  },
+
+  "Repère — Certain": {
+    "scope": "markdown",
+    "prefix": "@certain",
+    "body": [
+      "<button type=\"button\" class=\"marpup-repere\" data-repere=\"certain\">${1:certain}</button>$0",
+    ],
+    "description": "Repère philosophique : Certain",
+  },
+}
