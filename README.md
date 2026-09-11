@@ -91,7 +91,7 @@ Insère automatiquement :
 
 ## Personnalisation du thème
 
-A moins de s'y connaître en CSS, il est recommandé de ne pas modifier directement les fichiers de thème. Tu peux toutefois importer un thème dans le dossier `themes/` puis le renseigné dans le front-matter de tes slides Marp. Exemple :
+A moins de s'y connaître en CSS, il est recommandé de ne pas modifier directement les fichiers de thème. Tu peux toutefois importer un thème dans le dossier `themes/` puis le renseigner dans le front-matter de tes slides Marp. Exemple :
 
 ```yaml
 ---
