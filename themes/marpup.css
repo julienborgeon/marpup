@@ -3,8 +3,7 @@
  * @size 16:9 1280px 720px
 */
 
-/* Import des styles par défaut de Marp - NE PAS TOUCHER ! */
-@import "default";
+/* @import "default"; */
 
 /* Import des polices personnalisées */
 @font-face {
@@ -14,7 +13,6 @@
     format("woff2");
   font-family: "Atkinson Hyperlegible Next";
 }
-
 @font-face {
   font-style: italic;
   font-weight: 400;
@@ -22,7 +20,6 @@
     format("woff2");
   font-family: "Atkinson Hyperlegible Next";
 }
-
 @font-face {
   font-style: normal;
   font-weight: 700;
@@ -30,7 +27,6 @@
     format("woff2");
   font-family: "Atkinson Hyperlegible Next";
 }
-
 @font-face {
   font-style: italic;
   font-weight: 700;
@@ -47,47 +43,73 @@
 */
 
 :root {
-  /* Couleurs */
-  --marpup-color-background: #faf9f6;
-  --marpup-color-foreground: #202020;
-  --marpup-color-primary: #7c3f58;
-  --marpup-color-muted: #626262;
+  /* Couleurs MarpUp */
+  --marpup-color-background: rgb(250, 249, 246);
+  --marpup-color-foreground: rgb(39, 39, 39);
+  --marpup-color-primary: rgb(124, 63, 88);
+  --marpup-color-muted: rgb(98, 98, 98);
 
-  /* Typographie */
+  /* Typographie de la slide */
   --marpup-font-heading: "Atkinson Hyperlegible Next", Arial, sans-serif;
   --marpup-font-body: "Atkinson Hyperlegible Next", Arial, sans-serif;
-  --marpup-font-size: 30px;
-  --marpup-font-size-header: 18px;
-  --marpup-font-size-footer: 18px;
-  --marpup-font-size-page-number: 18px;
-  --marpup-font-size-h1: 2.2em;
-  --marpup-font-size-h2: 1.7em;
-  --marpup-font-size-h3: 1.4em;
-  --marpup-paragraph-margin-bottom: 2px;
+
+  --marpup-font-size-body: 30px;
+  --marpup-font-size-header: 0.5rem;
+  --marpup-font-size-footer: 0.5rem;
+  --marpup-font-size-page-number: 0.5rem;
+  --marpup-font-size-h1: 1.75rem;
+  --marpup-font-size-h2: 1.5rem;
+  --marpup-font-size-h3: 1.25rem;
+
+  --marpup-line-height-body: 1.35;
+  --marpup-line-height-heading: 1.2;
+  --marpup-letter-spacing-body: 0.015rem;
+
+  --marpup-margin-bottom-h1: 0.65rem;
+  --marpup-margin-bottom-h2: 0.65rem;
+  --marpup-margin-bottom-h3: 0.65em;
+  --marpup-margin-bottom-paragraph: 0.375rem;
 
   /* Structure de la slide */
-  --marpup-slide-padding: 64px;
-  --marpup-header-height: 64px;
-  --marpup-footer-height: 64px;
-  --marpup-content-gap: 24px;
+  --marpup-slide-padding: 2.5rem;
+  --marpup-header-height: 2.5rem;
+  --marpup-footer-height: 2.5rem;
+  --marpup-content-gap: 0.5rem;
 
   /* Citations */
-  --marpup-blockquote-border-width: 0.2em;
-  --marpup-blockquote-padding-left: 1em;
+  --marpup-blockquote-border-width: 0.2rem;
+  --marpup-blockquote-padding-left: 1rem;
+
+  /* Tableaux */
+  --marpup-table-row-background-alt: rgba(124, 63, 88, 0.1);
 
   /* Médias */
   --marpup-media-gap: 1rem;
   --marpup-media-margin-block: 0.25rem;
 
+  /* Boîtes de dialogues */
+  --marpup-dialog-border-width: 2px;
+  --marpup-dialog-border-radius: 3rem;
+  --marpup-dialog-padding-inline: 0.5rem;
+  --marpup-dialog-width: 45rem;
+  --marpup-dialog-font-size: 0.8rem;
+  --marpup-dialog-header-gap: 0.5rem;
+  --marpup-dialog-header-margin-bottom: 1rem;
+  --marpup-dialog-group-font-size: 0.5rem;
+  --marpup-dialog-title-font-size: 1.1rem;
+  --marpup-dialog-close-size: 1.5rem;
+  --marpup-dialog-close-font-size: 1.2rem;
+
   /* Repères philosophiques */
-  --marpup-color-repere: #245ea8;
-  --marpup-color-repere-hover: #1c4b88;
-  --marpup-repere-dialog-width: 720px;
+  --marpup-repere-color: #245ea8;
+  --marpup-repere-color-hover: #1c4b88;
 
   /* Notions philosophiques */
-  --marpup-color-notion: #245ea8;
-  --marpup-color-notion-hover: #1c4b88;
-  --marpup-notion-dialog-width: 720px;
+  --marpup-notion-color: #245ea8;
+  --marpup-notion-color-hover: #1c4b88;
+  --marpup-notion-border-width: 2px;
+  --marpup-notion-border-radius: 3rem;
+  --marpup-notion-padding-inline: 0.5rem;
 }
 
 /*
@@ -102,12 +124,13 @@ section {
   display: flex;
   position: relative;
   flex-direction: column;
+  justify-content: flex-start;
   background: var(--marpup-color-background);
   padding: calc(var(--marpup-header-height) + var(--marpup-content-gap))
     var(--marpup-slide-padding)
     calc(var(--marpup-footer-height) + var(--marpup-content-gap));
   color: var(--marpup-color-foreground);
-  font-size: var(--marpup-font-size);
+  font-size: var(--marpup-font-size-body);
   font-family: var(--marpup-font-body);
 }
 
@@ -143,49 +166,75 @@ header {
 header {
   top: 0;
   height: var(--marpup-header-height);
+  font-size: var(--marpup-font-size-header);
 }
 
 /* Pied de page par défaut */
 footer {
   bottom: 0;
   height: var(--marpup-footer-height);
+  font-size: var(--marpup-font-size-footer);
 }
 
 /* Titres par défaut */
 h1,
 h2,
 h3 {
+  margin-top: 0;
   color: var(--marpup-color-primary);
+  line-height: var(--marpup-line-height-heading);
   font-family: var(--marpup-font-heading);
   hyphens: auto;
+  letter-spacing: var(--marpup-letter-spacing-body);
   overflow-wrap: break-word;
 }
 
 /* Titre de niveau 1 par défaut */
 h1 {
+  margin-bottom: var(--marpup-margin-bottom-h1);
   font-size: var(--marpup-font-size-h1);
 }
 
 /* Titre de niveau 2 par défaut */
 h2 {
+  margin-bottom: var(--marpup-margin-bottom-h2);
   font-size: var(--marpup-font-size-h2);
+}
+
+/* Titre de niveau 3 par défaut */
+h3 {
+  margin-bottom: var(--marpup-margin-bottom-h3);
+  font-size: var(--marpup-font-size-h3);
+}
+
+:is(h1:has(+ h2), h1:has(+ h3), h2:has(+ h3)) {
+  margin-bottom: 0.1rem;
 }
 
 /* Paragraphes et éléments de liste */
 p,
 li {
   line-height: 1.35;
+  line-height: var(--marpup-line-height-body);
   letter-spacing: 0.01em;
+  letter-spacing: var(--marpup-letter-spacing-body);
 }
 
 /* Paragraphes par défaut */
 p {
-  margin-bottom: var(--marpup-paragraph-margin-bottom);
+  margin-top: 0;
+  margin-bottom: var(--marpup-margin-bottom-paragraph);
 }
 
 /* Ancre/lien par défaut */
 a {
   color: var(--marpup-color-primary);
+}
+
+/* Listes par défaut */
+ol,
+ul {
+  margin-block: 0.375rem;
 }
 
 /* Image par défaut */
@@ -196,9 +245,44 @@ img {
 
 /* Bloc de citation par défaut */
 blockquote {
+  margin-inline: 0;
+  margin-block: 0.375rem;
   border-left: var(--marpup-blockquote-border-width) solid
     var(--marpup-color-primary);
   padding-left: var(--marpup-blockquote-padding-left);
+}
+
+/* Dernier paragraphe d'un bloc de citation */
+blockquote > p:last-child {
+  margin-bottom: 0;
+}
+
+table {
+  margin-block: 0.5rem;
+  border-collapse: collapse;
+  max-width: 100%;
+}
+
+th,
+td {
+  vertical-align: top;
+  padding: 0.5em 0.25em;
+  text-align: left;
+}
+
+thead th,
+thead td {
+  border-bottom: 1px solid var(--marpup-color-muted);
+  font-weight: 700;
+}
+
+tbody tr:nth-child(even) {
+  background: var(--marpup-table-row-background-alt);
+}
+
+tbody tr:not(:last-child) th,
+tbody tr:not(:last-child) td {
+  border-bottom: 1px solid var(--marpup-color-muted);
 }
 
 /*
@@ -279,6 +363,37 @@ section.images-4 > p:has(> img) {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+section.split-left {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  padding: var(--marpup-slide-padding) var(--marpup-slide-padding)
+    var(--marpup-slide-padding) calc(50% + var(--marpup-slide-padding));
+}
+
+/* Masque header/footer/pagination */
+section.split-left > header,
+section.split-left > footer,
+section.split-left::after {
+  display: none;
+}
+
+/* Le paragraphe contenant l'image */
+section.split-left > p:has(> img:only-child):first-of-type {
+  position: absolute;
+  margin: 0;
+  inset: 0 50% 0 0;
+}
+
+/* L'image couvre entièrement la moitié gauche */
+section.split-left > p:has(> img:only-child):first-of-type > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /*
 ================================================================
   REPERES & NOTIONS / Styles par défaut du module philosophique
@@ -288,7 +403,7 @@ section.images-4 > p:has(> img) {
 
 /* Repère ou notion inséré dans le texte */
 :is(.marpup-repere, .marpup-notion) {
-  display: inline !important;
+  display: inline;
   vertical-align: baseline;
   appearance: none;
   cursor: pointer;
@@ -304,7 +419,7 @@ section.images-4 > p:has(> img) {
 .marpup-repere {
   border: 0;
   padding: 0;
-  color: var(--marpup-color-repere);
+  color: var(--marpup-repere-color);
   text-decoration: underline;
   text-decoration-thickness: 0.08em;
   text-underline-offset: 0.12em;
@@ -312,20 +427,23 @@ section.images-4 > p:has(> img) {
 
 /* Notion interactive */
 .marpup-notion {
-  border: 2px solid var(--marpup-color-notion);
-  border-radius: 48px;
-  padding-inline: 16px;
-  color: var(--marpup-color-notion);
+  border-width: var(--marpup-notion-border-width);
+  border-style: solid;
+  border-color: var(--marpup-notion-color);
+  border-radius: var(--marpup-notion-border-radius);
+  padding-inline: var(--marpup-notion-padding-inline);
+  color: var(--marpup-notion-color);
 }
 
 /* Effet au survol des repères */
 .marpup-repere:hover {
-  color: var(--marpup-color-repere-hover);
+  color: var(--marpup-repere-color-hover);
 }
 
 /* Effet au survol des notions */
 .marpup-notion:hover {
-  color: var(--marpup-color-notion-hover);
+  border-color: var(--marpup-notion-color-hover);
+  color: var(--marpup-notion-color-hover);
 }
 
 /* Effet au focus des repères et notions */
@@ -344,16 +462,31 @@ section.images-4 > p:has(> img) {
   box-sizing: border-box;
   margin: 0;
   border: 0;
-  border-radius: 0.5rem;
+  border-radius: var(--marpup-dialog-border-radius);
   background: var(--marpup-color-background);
-  padding: clamp(0.5rem, 2vw, 1.5rem);
-  width: min(var(--marpup-repere-dialog-width), calc(100% - 4rem));
+  padding: var(--marpup-dialog-padding-inline);
+  width: min(var(--marpup-dialog-width), calc(100% - 4rem));
   max-width: none;
   max-height: calc(100% - 4rem);
   overflow: auto;
+  overflow-x: hidden;
   color: var(--marpup-color-foreground);
-  font-size: 0.8em;
+  font-size: var(--marpup-dialog-font-size);
   font-family: var(--marpup-font-body);
+}
+
+@media (max-width: 600px) {
+  :is(.marpup-repere-dialog, .marpup-notion-dialog) {
+    --marpup-dialog-padding-inline: 1rem;
+    --marpup-dialog-font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 375px) {
+  :is(.marpup-repere-dialog, .marpup-notion-dialog) {
+    --marpup-dialog-padding-inline: 0.5rem;
+    --marpup-dialog-font-size: 0.5rem;
+  }
 }
 
 /* Fenêtre de définition : arrière-plan du dialogue */
@@ -366,22 +499,47 @@ section.images-4 > p:has(> img) {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 1rem;
-  margin-bottom: 1rem;
+  gap: var(--marpup-dialog-header-gap);
+  margin-bottom: var(--marpup-dialog-header-margin-bottom);
+}
+
+@media (max-width: 600px) {
+  :is(.marpup-repere-dialog__header, .marpup-notion-dialog__header) {
+    --marpup-dialog-header-gap: 0.5rem;
+    --marpup-dialog-header-margin-bottom: 0.5rem;
+  }
 }
 
 /* Fenêtre de définition : groupe du dialogue */
 :is(.marpup-repere-dialog__group, .marpup-notion-dialog__group) {
   margin: 0 0 0.25rem;
   color: var(--marpup-color-muted);
-  font-size: 0.65em;
+  font-size: var(--marpup-dialog-group-font-size);
+}
+
+@media (max-width: 600px) {
+  :is(.marpup-repere-dialog__group, .marpup-notion-dialog__group) {
+    --marpup-dialog-group-font-size: 0.5rem;
+  }
 }
 
 /* Fenêtre de définition : titre du dialogue */
 :is(.marpup-repere-dialog__title, .marpup-notion-dialog__title) {
   margin: 0;
-  font-size: clamp(1.15rem, 2vw, 1.5rem);
+  font-size: var(--marpup-dialog-title-font-size);
   font-family: var(--marpup-font-heading);
+}
+
+@media (max-width: 600px) {
+  :is(.marpup-repere-dialog__title, .marpup-notion-dialog__title) {
+    --marpup-dialog-title-font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 375px) {
+  :is(.marpup-repere-dialog__title, .marpup-notion-dialog__title) {
+    --marpup-dialog-title-font-size: 0.8rem;
+  }
 }
 
 /* Fenêtre de définition : titre du repère */
@@ -409,12 +567,19 @@ section.images-4 > p:has(> img) {
   border-radius: 50%;
   background: transparent;
   padding: 0;
-  width: 1.5em;
-  height: 1.5em;
+  width: var(--marpup-dialog-close-size);
+  height: var(--marpup-dialog-close-size);
   color: var(--marpup-color-foreground);
   font: inherit;
-  font-size: 1.2em;
+  font-size: var(--marpup-dialog-close-font-size);
   line-height: 1;
+}
+
+@media (max-width: 600px) {
+  :is(.marpup-repere-dialog__close, .marpup-notion-dialog__close) {
+    --marpup-dialog-close-size: 1.1rem;
+    --marpup-dialog-close-font-size: 0.9rem;
+  }
 }
 
 /* Fenêtre de définition : bouton de fermeture du dialogue au survol */

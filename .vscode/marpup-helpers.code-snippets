@@ -27,8 +27,6 @@
       "",
       "${5:Sous-titre}",
       "",
-      "---",
-      "",
       "$0",
     ],
     "description": "Marpup : Nouveau diaporama",
@@ -37,20 +35,90 @@
   "Ajoute une slide": {
     "scope": "markdown",
     "prefix": "/slide",
-    "body": ["", "---", "", "## ${1:Titre}", "", "$0"],
+    "body": ["---", "", "## ${1:Titre}", "", "$0"],
     "description": "Marpup : Nouvelle slide",
+  },
+
+  "Insère un lien": {
+    "scope": "markdown",
+    "prefix": "/link",
+    "body": ["[${1:Texte du lien}](${2:https://example.com})$0"],
+    "description": "MarpUp : Lien",
+  },
+
+  "Insère un lien avec titre": {
+    "scope": "markdown",
+    "prefix": "/link-title",
+    "body": ["[${1:Texte du lien}](${2:https://example.com} \"${3:Titre}\")$0"],
+    "description": "MarpUp : Lien avec titre",
+  },
+
+  "Insère une citation": {
+    "scope": "markdown",
+    "prefix": "/quote",
+    "body": [
+      "> ${1:Citation}",
+      "",
+      "— ${2:Auteur}, _${3:source}_, ${4:date}.",
+      "",
+      "$0",
+    ],
+    "description": "MarpUp : Citation avec auteur, œuvre et date",
   },
 
   "Insère un tableau": {
     "scope": "markdown",
     "prefix": "/table",
     "body": [
-      "| ${1:Colonne 1} | ${2:Colonne 2} |",
-      "| --- | --- |",
-      "| ${3:Valeur} | ${4:Valeur} |",
+      "| ${1:Colonne} | ${2:Colonne} |",
+      "| ------- | ------- |",
+      "| ${3:Valeur}  | ${4:Valeur}  |",
+      "| ${5:Valeur}  | ${6:Valeur}  |",
+      "",
       "$0",
     ],
     "description": "Marpup : Tableau Markdown",
+  },
+
+  "Insère un tableau à 3 colonnes": {
+    "scope": "markdown",
+    "prefix": "/table3",
+    "body": [
+      "| ${1:Colonne} | ${2:Colonne} | ${3:Colonne} |",
+      "| ------- | ------- | ------- |",
+      "| ${4:Valeur}  | ${5:Valeur}  | ${6:Valeur}  |",
+      "| ${7:Valeur}  | ${8:Valeur}  | ${9:Valeur}  |",
+      "",
+      "$0",
+    ],
+    "description": "MarpUp : Tableau à 3 colonnes",
+  },
+
+  "Insère un tableau à 4 colonnes": {
+    "scope": "markdown",
+    "prefix": "/table4",
+    "body": [
+      "| ${1:Colonne} | ${2:Colonne} | ${3:Colonne} | ${4:Colonne} |",
+      "| ------- | ------- | ------- | ------- |",
+      "| ${5:Valeur}  | ${6:Valeur}  | ${7:Valeur}  | ${8:Valeur}  |",
+      "| ${9:Valeur}  | ${10:Valeur}  | ${11:Valeur}  | ${12:Valeur}  |",
+      "",
+      "$0",
+    ],
+    "description": "MarpUp : Tableau à 4 colonnes",
+  },
+
+  "Insère un tableau avec alignements": {
+    "scope": "markdown",
+    "prefix": "/table-align",
+    "body": [
+      "| ${1:Colonne} | ${2:Colonne} | ${3:Colonne} |",
+      "| :------ | :-----: | ------: |",
+      "| ${4:Valeur}  | ${5:Valeur}  | ${6:Valeur}  |",
+      "",
+      "$0",
+    ],
+    "description": "MarpUp : Tableau avec alignement gauche, centre et droite",
   },
 
   "Insère une image locale": {
@@ -58,5 +126,12 @@
     "prefix": "/image",
     "body": ["![${1:Description}](./assets/images/${2:image.jpg})$0"],
     "description": "Marpup : Image locale",
+  },
+
+  "Insère une ligne de texte avec saut forcé": {
+    "scope": "markdown",
+    "prefix": "/break",
+    "body": ["<br>", "", "$0"],
+    "description": "MarpUp : Saut de ligne Markdown",
   },
 }
