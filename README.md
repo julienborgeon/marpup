@@ -34,11 +34,18 @@ marpup/
 │  └─ fonts/                # police d'écriture du projet
 │  └─ images/               # images utilisées dans le projet
 ├─ dist/                    # fichiers générés (PDF, PPTX, HTML)
+├─ examples/                # exemples de slides ou de configurations
+├─ node_modules/            # répertoire des modules npm installés
+├─ package.json             # fichier de configuration npm
 ├─ slides/                  # slides du projet
 │  └─ demo.md               # exemple de slide complète
 ├─ themes/                  # thèmes CSS pour Marp
 │  └─ marpup.css            # thème marpup
+├─ .gitignore               # fichiers et répertoires à ignorer par Git
+├─ LICENSE                  # licence du projet
 ├─ marp.config.mjs          # configuration de Marp pour le projet
+├─ package.json             # fichier de configuration npm
+├─ package-lock.json        # fichier de verrouillage des dépendances npm
 └─ README.md                # documentation du projet
 ```
 
@@ -46,7 +53,7 @@ marpup/
 
 - Ne pas modifier les fichiers `settings.json` ou `marp.config.mjs` directement, sauf si tu sais ce que tu fais.
 - Toujours vérifier les changements dans le fichier `dist/` après avoir modifié les slides ou les thèmes.
-- - Le fichier de snippet est tout à fait extensible et personnalisable, tu peux y ajouter tes propres snippets selon tes besoins.
+- Le fichier de snippet est tout à fait extensible et personnalisable, tu peux y ajouter tes propres snippets selon tes besoins.
 - Les thèmes CSS dans le dossier `themes/` peuvent également être modifiés ou étendus pour personnaliser l'apparence des slides.
 - Les fichiers dans le dossier `assets/` peuvent être ajoutés ou modifiés pour inclure de nouvelles ressources comme des polices, images ou vidéos.
 
@@ -70,7 +77,7 @@ Insère automatiquement :
 ![Description](../assets/images/zelda-bed-chill.jpg)
 ```
 
-2. Pour les snippets "marp core", utilisés pour ajouter des classes aux sections/slides, le préfixe est `@-`. Exemple :
+2. Pour les snippets "marp core", utilisés pour ajouter des classes aux sections/slides, le préfixe est `@`. Exemple :
 
 ```markdown
 @image-gauche
