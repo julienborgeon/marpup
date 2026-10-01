@@ -5,7 +5,7 @@ MarpUp permet de rédiger des présentations en Markdown, de les prévisualiser 
 ## Organisation du projet
 
 - `slides/` : conserver les fichiers Markdown des présentations.
-- `slides/assets/` : conserver les images, vidéos, polices et modules utilisés par les slides.
+- `slides/assets/` : conserver les images, vidéos, fichiers sources des polices et modules utilisés par les slides.
 - `themes/marpup.css` : définir l'apparence et les classes du thème MarpUp.
 - `.vscode/` : fournir les snippets disponibles pendant la rédaction.
 - `dist/` : recevoir les présentations générées et la copie des ressources nécessaires.
@@ -24,6 +24,8 @@ npm ci
 2. Ouvrir ce fichier dans VS Code en mode Markdown.
 3. Saisir `/template`, puis sélectionner le snippet **Marpup : Nouveau diaporama**.
 4. Utiliser la touche `Tab` pour renseigner successivement le titre, l'auteur, l'en-tête, le pied de page et le sous-titre.
+
+Les chemins à adapter dans un sous-dossier concernent les images, vidéos et scripts locaux. Les polices sont directement intégrées au thème et fonctionnent automatiquement à toute profondeur.
 
 Toujours commencer une nouvelle présentation avec `/template`. Ce snippet insère d'abord la configuration YAML nécessaire :
 
@@ -143,6 +145,6 @@ assets/
 ```
 
 > [!IMPORTANT]
-> Conserver le fichier HTML et le dossier `assets` côte à côte, sans renommer ni réorganiser les sous-dossiers. Copier uniquement le fichier HTML casserait les chemins relatifs : les polices, images, médias et modules philosophiques ne seraient alors plus chargés.
+> Conserver le fichier HTML et le dossier `assets` côte à côte, sans renommer ni réorganiser les sous-dossiers. Copier uniquement le fichier HTML casserait les chemins relatifs : les images, médias et modules philosophiques ne seraient alors plus chargés. Les polices du thème, déjà intégrées au CSS, resteraient disponibles.
 
 Pour une utilisation hors connexion, vérifier également que les contenus référencés par une adresse Internet ne sont pas indispensables. Les fichiers locaux placés dans `assets/` restent disponibles sans connexion.

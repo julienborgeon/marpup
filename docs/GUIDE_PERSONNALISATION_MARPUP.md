@@ -34,6 +34,8 @@ Modifier seulement la valeur placée après les deux-points. Conserver le nom du
 --marpup-slide-padding: 36px;
 ```
 
+Les polices Atkinson fournies sont directement intégrées au thème afin de fonctionner depuis tous les sous-dossiers et hors connexion. Pour choisir une autre police déjà installée sur l'ordinateur, modifier uniquement `--marpup-font-heading` et `--marpup-font-body`. Confier l'intégration d'un nouveau fichier de police à la personne chargée de la maintenance du thème.
+
 > [!IMPORTANT]
 > Ne jamais modifier les règles CSS placées après la section des tokens. Prévisualiser ensuite le résultat avec `npm run dev` et procéder par petites modifications.
 
@@ -105,7 +107,7 @@ mon_repere: {
 },
 ```
 
-Pour insérer ensuite cette nouvelle entrée dans une slide, il est impératif de modifier le fichier `marupu-reperes.code-snippets`. C'est une opération sensible ! Mais il suffit de respecter la syntaxe des snippets existants pour en ajouter un (après une `,` ajoutée après l'accolade fermante du dernier snippet et avant la fermeture du tableau des snippets `}` du fichier).
+Pour insérer ensuite cette nouvelle entrée dans une slide, il est impératif de modifier le fichier `marpup-reperes.code-snippets`. C'est une opération sensible ! Mais il suffit de respecter la syntaxe des snippets existants pour en ajouter un (après une `,` ajoutée après l'accolade fermante du dernier snippet et avant la fermeture du tableau des snippets `}` du fichier).
 
 Le résultat escompté est le suivant (à tester en renseignant le snippet nouvellement ajouté) :
 

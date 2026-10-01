@@ -44,11 +44,7 @@ Changer l'URL du dépôt distant `origin` pour qu'elle pointe vers le dépôt pe
 ```bash
 git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
 git remote -v
-git status
-git add .
-git commit -m "First commit"
-git push
-git pull
+git push -u origin main
 ```
 
 Remplacer `https://github.com/USERNAME/REPOSITORY.git` par l'adresse HTTPS ou SSH du dépôt vide créé précédemment.
@@ -83,6 +79,7 @@ npm run build:html
 
 > [!IMPORTANT]
 > Conserver les fichiers `.md` à la racine de `slides/` pour que les chemins relatifs `./assets/...` insérés par les snippets et le template restent valides. **En cas d'organisation en sous-dossiers, il faudra prévoir de modifier les chemins relatifs en conséquence.**
+> Les polices du thème sont directement intégrées au CSS : leur chargement ne nécessite donc aucune adaptation de chemin, quelle que soit la profondeur du fichier Markdown.
 
 ## Structure du projet
 
@@ -95,7 +92,7 @@ marpup/
 │  └─ copy-slide-assets.mjs         Copie des ressources locales vers dist/assets
 ├─ slides/
 │  ├─ assets/
-│  │  ├─ fonts/                     Polices custom embarquées
+│  │  ├─ fonts/                     Fichiers sources des polices intégrées au thème
 │  │  ├─ images/                    Images locales
 │  │  ├─ videos/                    Vidéos locales
 │  │  └─ philosophy/                Données et logique des modules des notions et repères
@@ -138,7 +135,7 @@ assets/
 ```
 
 > [!IMPORTANT]
-> Conserver le fichier HTML et le dossier `assets` côte à côte. Copier uniquement le fichier HTML casserait les chemins des polices, images, médias et scripts.
+> Conserver le fichier HTML et le dossier `assets` côte à côte. Copier uniquement le fichier HTML casserait les chemins des images, médias et scripts.
 
 ## Recommandations
 
@@ -156,7 +153,7 @@ assets/
 > Les quatre balises `<script>` insérées par `/template` sont indispensables aux repères et notions. Conserver également `html: true` dans `marp.config.mjs`, car les composants interactifs reposent sur du HTML intégré.
 
 > [!NOTE]
-> Une image, une vidéo, une police ou une carte chargée depuis Internet peut devenir indisponible hors connexion. Préférer les ressources locales dans `slides/assets/` pour une présentation autonome.
+> Une image, une vidéo ou une carte chargée depuis Internet peut devenir indisponible hors connexion. Préférer les ressources locales dans `slides/assets/` pour une présentation autonome.
 
 ## Travail quotidien avec Git
 
