@@ -1,36 +1,417 @@
 {
-  "Insère image à gauche": {
+  "Aligne un média à gauche": {
     "scope": "markdown",
-    "prefix": "!image-gauche",
-    "body": ["<!-- _class: image-left -->", ""],
-    "description": "Marpup : Image à gauche",
+    "prefix": "!media-gauche",
+    "body": ["<!-- _class: media-left -->", "", ""],
+    "description": "Marpup : Image ou vidéo alignée à gauche",
   },
 
-  "Insère image à droite": {
+  "Aligne un média à droite": {
     "scope": "markdown",
-    "prefix": "!image-droite",
-    "body": ["<!-- _class: image-right -->", ""],
-    "description": "Marpup : Image à droite",
+    "prefix": "!media-droite",
+    "body": ["<!-- _class: media-right -->", "", ""],
+    "description": "Marpup : Image ou vidéo alignée à droite",
   },
 
-  "Insère 2 images": {
+  "Dispose 2 médias": {
     "scope": "markdown",
-    "prefix": "!images-2",
-    "body": ["<!-- _class: images-2 -->", ""],
-    "description": "Marpup : 2 images en vis-à-vis",
+    "prefix": "!media-2",
+    "body": ["<!-- _class: media-2 -->", "", ""],
+    "description": "Marpup : 2 images ou vidéos en vis-à-vis",
   },
 
-  "Insère 3 images": {
+  "Dispose 3 médias": {
     "scope": "markdown",
-    "prefix": "!images-3",
-    "body": ["<!-- _class: images-3 -->", ""],
-    "description": "Marpup : 3 images en vis-à-vis",
+    "prefix": "!media-3",
+    "body": ["<!-- _class: media-3 -->", "", ""],
+    "description": "Marpup : 3 images ou vidéos en vis-à-vis",
   },
 
-  "Insère 4 images": {
+  "Dispose 4 médias": {
     "scope": "markdown",
-    "prefix": "!images-4",
-    "body": ["<!-- _class: images-4 -->", ""],
-    "description": "Marpup : 4 images sur 2 colonnes",
+    "prefix": "!media-4",
+    "body": ["<!-- _class: media-4 -->", "", ""],
+    "description": "Marpup : 4 images ou vidéos sur 2 colonnes",
+  },
+
+  "Dispose 5 médias": {
+    "scope": "markdown",
+    "prefix": "!media-5",
+    "body": ["<!-- _class: media-5 -->", "", ""],
+    "description": "Marpup : 5 images ou vidéos sur 2 lignes",
+  },
+
+  "Dispose 6 médias": {
+    "scope": "markdown",
+    "prefix": "!media-6",
+    "body": ["<!-- _class: media-6 -->", "", ""],
+    "description": "Marpup : 6 images ou vidéos sur 2 lignes",
+  },
+
+  "Dispose 2 médias plein écran": {
+    "scope": "markdown",
+    "prefix": "!media-2-full",
+    "body": ["<!-- _class: media-2-full -->", "", ""],
+    "description": "Marpup : 2 images ou vidéos en vis-à-vis, plein écran",
+  },
+
+  "Dispose 3 médias plein écran": {
+    "scope": "markdown",
+    "prefix": "!media-3-full",
+    "body": ["<!-- _class: media-3-full -->", "", ""],
+    "description": "Marpup : 3 images ou vidéos en vis-à-vis, plein écran",
+  },
+
+  "Dispose 4 médias plein écran": {
+    "scope": "markdown",
+    "prefix": "!media-4-full",
+    "body": ["<!-- _class: media-4-full -->", "", ""],
+    "description": "Marpup : 4 images ou vidéos sur 2 colonnes, plein écran",
+  },
+
+  "Dispose 5 médias plein écran": {
+    "scope": "markdown",
+    "prefix": "!media-5-full",
+    "body": ["<!-- _class: media-5-full -->", "", ""],
+    "description": "Marpup : 5 images ou vidéos sur 2 lignes, plein écran",
+  },
+
+  "Dispose 6 médias plein écran": {
+    "scope": "markdown",
+    "prefix": "!media-6-full",
+    "body": ["<!-- _class: media-6-full -->", "", ""],
+    "description": "Marpup : 6 images ou vidéos sur 2 lignes, plein écran",
+  },
+
+  "Étend un média en plein écran": {
+    "scope": "markdown",
+    "prefix": "!media-full",
+    "body": ["<!-- _class: fullscreen -->", "", ""],
+    "description": "Marpup : Image ou vidéo en plein écran",
+  },
+
+  "Place un média sur la moitié gauche": {
+    "scope": "markdown",
+    "prefix": "!media-split-left",
+    "body": ["<!-- _class: split-left cover -->", "", ""],
+    "description": "Marpup : Image ou vidéo sur la moitié gauche",
+  },
+  "Place un média sur la moitié droite": {
+    "scope": "markdown",
+    "prefix": "!media-split-right",
+    "body": ["<!-- _class: split-right cover -->", "", ""],
+    "description": "Marpup : Image ou vidéo sur la moitié droite",
+  },
+
+  "Retire header + footer + page": {
+    "scope": "markdown",
+    "prefix": "!no-chrome",
+    "body": ["<!-- _class: no-chrome -->", "", ""],
+    "description": "Marpup : Retire header + footer + page",
+  },
+
+  "Insère titre + sous-titre encadrés": {
+    "scope": "markdown",
+    "prefix": "!title-box",
+    "body": [
+      "<!-- _class: title-box -->",
+      "",
+      "# ${1:Titre}",
+      "",
+      "## ${2:Sous-titre}",
+      "",
+      "",
+    ],
+    "description": "Marpup : Titre + sous-titre dans un encadré grisé",
+  },
+
+  "Restaure les puces par défaut": {
+    "scope": "markdown",
+    "prefix": "!default-bullets",
+    "body": ["<!-- _class: default-bullets -->", "", ""],
+    "description": "Marpup : Restaure les puces par défaut du navigateur",
+  },
+
+  "Insère puces P/C": {
+    "scope": "markdown",
+    "prefix": "!pc-bullets",
+    "body": ["<!-- _class: pc-bullets -->", "", ""],
+    "description": "Marpup : Numéros de ol en P1, P2... et puces de ul en C",
+  },
+
+  "Préserve une liste animée": {
+    "scope": "markdown",
+    "prefix": "!liste-animee",
+    "body": ["<!-- prettier-ignore -->", "$0"],
+    "description": "Marpup : Préserve la syntaxe Marpit d'une liste animée",
+  },
+
+  "Insère texte en taille xs": {
+    "scope": "markdown",
+    "prefix": "!text-xs",
+    "body": ["<!-- _class: text-xs -->", "", ""],
+    "description": "Marpup : Texte en taille xs",
+  },
+
+  "Insère texte en taille sm": {
+    "scope": "markdown",
+    "prefix": "!text-sm",
+    "body": ["<!-- _class: text-sm -->", "", ""],
+    "description": "Marpup : Texte en taille sm",
+  },
+
+  "Insère texte en taille md": {
+    "scope": "markdown",
+    "prefix": "!text-md",
+    "body": ["<!-- _class: text-md -->", "", ""],
+    "description": "Marpup : Texte en taille md",
+  },
+  "Insère texte en taille lg": {
+    "scope": "markdown",
+    "prefix": "!text-lg",
+    "body": ["<!-- _class: text-lg -->", "", ""],
+    "description": "Marpup : Texte en taille lg",
+  },
+  "Insère texte en taille xl": {
+    "scope": "markdown",
+    "prefix": "!text-xl",
+    "body": ["<!-- _class: text-xl -->", "", ""],
+    "description": "Marpup : Texte en taille xl",
+  },
+  "Insère texte en taille 2xl": {
+    "scope": "markdown",
+    "prefix": "!text-2xl",
+    "body": ["<!-- _class: text-2xl -->", "", ""],
+    "description": "Marpup : Texte en taille 2xl",
+  },
+
+  "Aligne le texte à gauche": {
+    "scope": "markdown",
+    "prefix": "!text-left",
+    "body": ["<!-- _class: text-left -->", "", ""],
+    "description": "Marpup : Aligne les paragraphes à gauche",
+  },
+
+  "Centre le texte": {
+    "scope": "markdown",
+    "prefix": "!text-center",
+    "body": ["<!-- _class: text-center -->", "", ""],
+    "description": "Marpup : Centre les paragraphes",
+  },
+
+  "Aligne le texte à droite": {
+    "scope": "markdown",
+    "prefix": "!text-right",
+    "body": ["<!-- _class: text-right -->", "", ""],
+    "description": "Marpup : Aligne les paragraphes à droite",
+  },
+
+  "Justifie le texte": {
+    "scope": "markdown",
+    "prefix": "!text-justify",
+    "body": ["<!-- _class: text-justify -->", "", ""],
+    "description": "Marpup : Justifie les paragraphes",
+  },
+
+  "Utilise une graisse normale": {
+    "scope": "markdown",
+    "prefix": "!font-normal",
+    "body": ["<!-- _class: font-normal -->", "", ""],
+    "description": "Marpup : Texte des paragraphes et listes en graisse normale",
+  },
+
+  "Met le texte en gras": {
+    "scope": "markdown",
+    "prefix": "!font-bold",
+    "body": ["<!-- _class: font-bold -->", "", ""],
+    "description": "Marpup : Texte des paragraphes et listes en gras",
+  },
+
+  "Insère une citation longue": {
+    "scope": "markdown",
+    "prefix": "!blockquote-long",
+    "body": [
+      "<!-- _class: blockquote-long no-chrome text-sm text-justify -->",
+      "",
+      "> ${1:Citation}",
+      ">",
+      "> — ${2:Auteur}, _${3:source}_, ${4:date}.",
+      "",
+      "$0",
+    ],
+    "description": "Marpup : Citation longue centrée sans en-tête, pied de page ni pagination",
+  },
+
+  "Insère une définition pédagogique": {
+    "scope": "markdown",
+    "prefix": "!layout-definition",
+    "body": [
+      "<!-- _class: layout-definition default-bullets -->",
+      "",
+      "- ${1:Définition}",
+      "- ${2:Exemple}",
+      "- ${3:Exemple}",
+      "",
+      "$0",
+    ],
+    "description": "Marpup : Définition mise en valeur suivie de ses exemples",
+  },
+
+  "Insère une distinction pédagogique": {
+    "scope": "markdown",
+    "prefix": "!layout-distinction",
+    "body": [
+      "<!-- _class: layout-distinction text-md -->",
+      "",
+      "<div class=\"grid\">",
+      "",
+      "<div class=\"col\">",
+      "",
+      "- ${1:Premier concept}",
+      "- ${2:Exemple}",
+      "- ${3:Exemple}",
+      "",
+      "</div>",
+      "",
+      "<div class=\"col\">",
+      "",
+      "≠",
+      "",
+      "</div>",
+      "",
+      "<div class=\"col\">",
+      "",
+      "- ${4:Second concept}",
+      "- ${5:Exemple}",
+      "- ${6:Exemple}",
+      "",
+      "</div>",
+      "",
+      "</div>",
+      "",
+      "$0",
+    ],
+    "description": "Marpup : Deux concepts présentés côte à côte avec leurs exemples",
+  },
+
+  "Insère un exercice de distinction": {
+    "scope": "markdown",
+    "prefix": "!exo-distinction",
+    "body": [
+      "<!-- _class: exo-distinction -->",
+      "",
+      "# ${1:Exercice de distinction}",
+      "",
+      "| ${2:Colonne} | ${3:Colonne} |",
+      "| ------------- | ------------- |",
+      "| ?             | ?             |",
+      "| ?             | ?             |",
+      "",
+      "<div class=\"grid-item\">",
+      "",
+      "1. ${4:Élément}",
+      "2. ${5:Élément}",
+      "3. ${6:Élément}",
+      "4. ${7:Élément}",
+      "5. ${8:Élément}",
+      "6. ${9:Élément}",
+      "",
+      "</div>",
+      "",
+      "$0",
+    ],
+    "description": "Marpup : Exercice de classement dans un tableau à deux colonnes",
+  },
+
+  "Insère un exercice de rédaction": {
+    "scope": "markdown",
+    "prefix": "!exo-redaction",
+    "body": [
+      "<!-- _class: exo-redaction -->",
+      "",
+      "# ${1:Exercice de rédaction}",
+      "",
+      "## ${2:Consigne}",
+      "",
+      "1. ${3:Élément attendu}",
+      "2. ${4:Élément attendu}",
+      "3. ${5:Élément attendu}",
+      "",
+      "$0",
+    ],
+    "description": "Marpup : Exercice de rédaction avec consigne et éléments attendus",
+  },
+
+  "Insère un exercice QCM": {
+    "scope": "markdown",
+    "prefix": "!exo-qcm",
+    "body": [
+      "<!-- _class: exo-qcm -->",
+      "",
+      "# ${1:QCM}",
+      "",
+      "- **${2:Question}**",
+      "  1. ${3:Option A}",
+      "  2. ${4:Option B}",
+      "  3. ${5:Option C}",
+      "",
+      "$0",
+    ],
+    "description": "Marpup : Question à choix multiple",
+  },
+
+  "Insère un exercice de raisonnement": {
+    "scope": "markdown",
+    "prefix": "!exo-raisonnement",
+    "body": [
+      "<!-- _class: exo-raisonnement no-chrome -->",
+      "",
+      "<iframe",
+      "  class=\"embeded-map\"",
+      "  src='${1:https://example.com}'",
+      "></iframe>",
+      "",
+      "$0",
+    ],
+    "description": "Marpup : Carte de raisonnement intégrée en plein écran",
+  },
+
+  "Insère un exercice de discussion": {
+    "scope": "markdown",
+    "prefix": "!exo-discussion",
+    "body": [
+      "<!-- _class: exo-discussion -->",
+      "",
+      "# ${1:Exercice de discussion}",
+      "",
+      "$0",
+    ],
+    "description": "Marpup : Exercice de discussion signalé par un pictogramme",
+  },
+
+  "Insère un exercice d'approfondissement": {
+    "scope": "markdown",
+    "prefix": "!exo-approfondissement",
+    "body": [
+      "<!-- _class: exo-approfondissement -->",
+      "",
+      "# ${1:Exercice d'approfondissement}",
+      "",
+      "$0",
+    ],
+    "description": "Marpup : Exercice d'approfondissement signalé par un pictogramme",
+  },
+
+  "Insère un exercice de groupe": {
+    "scope": "markdown",
+    "prefix": "!exo-groupe",
+    "body": [
+      "<!-- _class: exo-groupe -->",
+      "",
+      "# ${1:Exercice de groupe}",
+      "",
+      "$0",
+    ],
+    "description": "Marpup : Exercice de groupe signalé par un pictogramme",
   },
 }

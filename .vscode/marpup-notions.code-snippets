@@ -3,7 +3,7 @@
     "scope": "markdown",
     "prefix": "@art",
     "body": [
-      "<button type=\"button\" class=\"marpup-notion\" data-notion=\"art\">${1:art}</button>$0",
+      "<button type='button' class='marpup-notion' data-notion='art'>${1:art}</button>$0",
     ],
     "description": "Notion philosophique : Art",
   },
@@ -12,7 +12,7 @@
     "scope": "markdown",
     "prefix": "@bonheur",
     "body": [
-      "<button type=\"button\" class=\"marpup-notion\" data-notion=\"bonheur\">${1:bonheur}</button>$0",
+      "<button type='button' class='marpup-notion' data-notion='bonheur'>${1:bonheur}</button>$0",
     ],
     "description": "Notion philosophique : Bonheur",
   },
@@ -21,7 +21,7 @@
     "scope": "markdown",
     "prefix": "@conscience",
     "body": [
-      "<button type=\"button\" class=\"marpup-notion\" data-notion=\"conscience\">${1:conscience}</button>$0",
+      "<button type='button' class='marpup-notion' data-notion='conscience'>${1:conscience}</button>$0",
     ],
     "description": "Notion philosophique : Conscience",
   },
@@ -30,7 +30,7 @@
     "scope": "markdown",
     "prefix": "@devoir",
     "body": [
-      "<button type=\"button\" class=\"marpup-notion\" data-notion=\"devoir\">${1:devoir}</button>$0",
+      "<button type='button' class='marpup-notion' data-notion='devoir'>${1:devoir}</button>$0",
     ],
     "description": "Notion philosophique : Devoir",
   },
@@ -39,7 +39,7 @@
     "scope": "markdown",
     "prefix": "@etat",
     "body": [
-      "<button type=\"button\" class=\"marpup-notion\" data-notion=\"etat\">${1:État}</button>$0",
+      "<button type='button' class='marpup-notion' data-notion='etat'>${1:État}</button>$0",
     ],
     "description": "Notion philosophique : État",
   },
@@ -48,7 +48,7 @@
     "scope": "markdown",
     "prefix": "@inconscient",
     "body": [
-      "<button type=\"button\" class=\"marpup-notion\" data-notion=\"inconscient\">${1:inconscient}</button>$0",
+      "<button type='button' class='marpup-notion' data-notion='inconscient'>${1:inconscient}</button>$0",
     ],
     "description": "Notion philosophique : Inconscient",
   },
@@ -57,7 +57,7 @@
     "scope": "markdown",
     "prefix": "@justice",
     "body": [
-      "<button type=\"button\" class=\"marpup-notion\" data-notion=\"justice\">${1:justice}</button>$0",
+      "<button type='button' class='marpup-notion' data-notion='justice'>${1:justice}</button>$0",
     ],
     "description": "Notion philosophique : Justice",
   },
@@ -66,7 +66,7 @@
     "scope": "markdown",
     "prefix": "@langage",
     "body": [
-      "<button type=\"button\" class=\"marpup-notion\" data-notion=\"langage\">${1:langage}</button>$0",
+      "<button type='button' class='marpup-notion' data-notion='langage'>${1:langage}</button>$0",
     ],
     "description": "Notion philosophique : Langage",
   },
@@ -75,7 +75,7 @@
     "scope": "markdown",
     "prefix": "@liberte",
     "body": [
-      "<button type=\"button\" class=\"marpup-notion\" data-notion=\"liberte\">${1:liberté}</button>$0",
+      "<button type='button' class='marpup-notion' data-notion='liberte'>${1:liberté}</button>$0",
     ],
     "description": "Notion philosophique : Liberté",
   },
@@ -84,7 +84,7 @@
     "scope": "markdown",
     "prefix": "@nature",
     "body": [
-      "<button type=\"button\" class=\"marpup-notion\" data-notion=\"nature\">${1:nature}</button>$0",
+      "<button type='button' class='marpup-notion' data-notion='nature'>${1:nature}</button>$0",
     ],
     "description": "Notion philosophique : Nature",
   },
@@ -93,7 +93,7 @@
     "scope": "markdown",
     "prefix": "@raison",
     "body": [
-      "<button type=\"button\" class=\"marpup-notion\" data-notion=\"raison\">${1:raison}</button>$0",
+      "<button type='button' class='marpup-notion' data-notion='raison'>${1:raison}</button>$0",
     ],
     "description": "Notion philosophique : Raison",
   },
@@ -102,7 +102,7 @@
     "scope": "markdown",
     "prefix": "@religion",
     "body": [
-      "<button type=\"button\" class=\"marpup-notion\" data-notion=\"religion\">${1:religion}</button>$0",
+      "<button type='button' class='marpup-notion' data-notion='religion'>${1:religion}</button>$0",
     ],
     "description": "Notion philosophique : Religion",
   },
@@ -111,7 +111,7 @@
     "scope": "markdown",
     "prefix": "@science",
     "body": [
-      "<button type=\"button\" class=\"marpup-notion\" data-notion=\"science\">${1:science}</button>$0",
+      "<button type='button' class='marpup-notion' data-notion='science'>${1:science}</button>$0",
     ],
     "description": "Notion philosophique : Science",
   },
@@ -120,7 +120,7 @@
     "scope": "markdown",
     "prefix": "@technique",
     "body": [
-      "<button type=\"button\" class=\"marpup-notion\" data-notion=\"technique\">${1:technique}</button>$0",
+      "<button type='button' class='marpup-notion' data-notion='technique'>${1:technique}</button>$0",
     ],
     "description": "Notion philosophique : Technique",
   },
@@ -129,7 +129,7 @@
     "scope": "markdown",
     "prefix": "@temps",
     "body": [
-      "<button type=\"button\" class=\"marpup-notion\" data-notion=\"temps\">${1:temps}</button>$0",
+      "<button type='button' class='marpup-notion' data-notion='temps'>${1:temps}</button>$0",
     ],
     "description": "Notion philosophique : Temps",
   },
@@ -138,7 +138,7 @@
     "scope": "markdown",
     "prefix": "@travail",
     "body": [
-      "<button type=\"button\" class=\"marpup-notion\" data-notion=\"travail\">${1:travail}</button>$0",
+      "<button type='button' class='marpup-notion' data-notion='travail'>${1:travail}</button>$0",
     ],
     "description": "Notion philosophique : Travail",
   },
@@ -147,7 +147,7 @@
     "scope": "markdown",
     "prefix": "@verite",
     "body": [
-      "<button type=\"button\" class=\"marpup-notion\" data-notion=\"verite\">${1:vérité}</button>$0",
+      "<button type='button' class='marpup-notion' data-notion='verite'>${1:vérité}</button>$0",
     ],
     "description": "Notion philosophique : Vérité",
   },

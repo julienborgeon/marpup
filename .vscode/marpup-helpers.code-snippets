@@ -15,13 +15,10 @@
       "---",
       "",
       "",
-      "<!-- Repères philosophiques -->",
-      "<script src=\"./assets/philosophy/reperes-data.js\"></script>",
-      "<script src=\"./assets/philosophy/reperes.js\" defer></script>",
-      "",
-      "<!-- Notions philosophiques -->",
-      "<script src=\"./assets/philosophy/notions-data.js\"></script>",
-      "<script src=\"./assets/philosophy/notions.js\" defer></script>",
+      "<script src='./assets/philosophy/reperes-data.js'></script>",
+      "<script src='./assets/philosophy/reperes.js' defer></script>",
+      "<script src='./assets/philosophy/notions-data.js'></script>",
+      "<script src='./assets/philosophy/notions.js' defer></script>",
       "",
       "# ${1:Titre}",
       "",
@@ -58,8 +55,8 @@
     "prefix": "/quote",
     "body": [
       "> ${1:Citation}",
-      "",
-      "— ${2:Auteur}, _${3:source}_, ${4:date}.",
+      ">",
+      "> — ${2:Auteur}, _${3:source}_, ${4:date}.",
       "",
       "$0",
     ],
@@ -124,8 +121,19 @@
   "Insère une image locale": {
     "scope": "markdown",
     "prefix": "/image",
-    "body": ["![${1:Description}](./assets/images/${2:image.jpg})$0"],
+    "body": ["![${1:Description}](./assets/images/${2:image.jpg})", "", "$0"],
     "description": "Marpup : Image locale",
+  },
+
+  "Insère une vidéo locale ou distante": {
+    "scope": "markdown",
+    "prefix": "/video",
+    "body": [
+      "<video controls playsinline preload=\"metadata\" src=\"${1:./assets/videos/video.mp4}\"></video>",
+      "",
+      "$0",
+    ],
+    "description": "Marpup : Vidéo locale ou distante avec contrôles de lecture",
   },
 
   "Insère une ligne de texte avec saut forcé": {
@@ -133,5 +141,12 @@
     "prefix": "/break",
     "body": ["<br>", "", "$0"],
     "description": "MarpUp : Saut de ligne Markdown",
+  },
+
+  "Insère un texte coloré": {
+    "scope": "markdown",
+    "prefix": "/color",
+    "body": ["<span class='${1:red}'>${2:Texte}</span>$0"],
+    "description": "MarpUp : accepte red, blue, green, orange",
   },
 }
