@@ -145,7 +145,7 @@ window.MARPUP_REPERES = {
     terme: "En droit",
     groupe: "En fait / en droit",
     definition:
-      "Ce qui est en droit caractérise ce qui est légal ou légitime. Cela fait référence à une règle à suivre, à ce qui doit être, à un idéal à réaliser",
+      "Ce qui est en droit caractérise ce qui est légal ou légitime. Cela fait référence à une règle à suivre, à ce qui doit être, à un idéal à réaliser.",
   },
 
   formel: {
@@ -216,7 +216,7 @@ window.MARPUP_REPERES = {
     terme: "Identité",
     groupe: "Identité / égalité / différence",
     definition:
-      "L'identité numérique désigne l'ensemble des caractéristiques qui distinguent  numériquement une chose d'une autre. L'identité personnelle désigne le caractère de ce qui demeure inchangé à travers le temps et malgré les changements ; ce qu'il y a d'essentiel dans l'individu, par opposition à l'ensemble de ses caractéristiques accidentelles.",
+      "L'identité numérique désigne l'ensemble des caractéristiques qui distinguent numériquement une chose d'une autre. L'identité personnelle désigne le caractère de ce qui demeure inchangé à travers le temps et malgré les changements ; ce qu'il y a d'essentiel dans l'individu, par opposition à l'ensemble de ses caractéristiques accidentelles.",
   },
   egalite: {
     terme: "Égalité",
@@ -267,7 +267,7 @@ window.MARPUP_REPERES = {
     terme: "Légitime",
     groupe: "Légal / légitime",
     definition:
-      "Est légitime ce qui conforme à la morale / ce qui est juste du point de vue des valeurs éthiques. Ce qui est légitime n'est pas nécessairement légal.",
+      "Est légitime ce qui est conforme à la morale / ce qui est juste du point de vue des valeurs éthiques. Ce qui est légitime n'est pas nécessairement légal.",
   },
 
   mediat: {
@@ -287,7 +287,7 @@ window.MARPUP_REPERES = {
     terme: "Objectif",
     groupe: "Objectif / subjectif / intersubjectif",
     definition:
-      "Est objectif ce qui existe factuellement, indépendamment de toute sensibilité et de tout sujet, de tout point de vue. C‘est ce qui est relatif aux choses telles qu'elles sont en elles-mêmes, appréhendées de manière impartiale et neutre. Est objectif ce qui est relatif à l'objet à connaître.",
+      "Est objectif ce qui existe factuellement, indépendamment de toute sensibilité et de tout sujet, de tout point de vue. C'est ce qui est relatif aux choses telles qu'elles sont en elles-mêmes, appréhendées de manière impartiale et neutre. Est objectif ce qui est relatif à l'objet à connaître.",
   },
   subjectif: {
     terme: "Subjectif",
@@ -345,7 +345,7 @@ window.MARPUP_REPERES = {
     terme: "Principe",
     groupe: "Principe / cause / fin",
     definition:
-      "Au sens moral, un principe est un jugement normatif relatif à ce qui est bien ou mal, à ce qu'il faut faire ou ne pas faire. La pratique se règle en fonction d'un ensemble de principes, c'est-à-dire de règles, d'action. Au sens logique, un principe est une proposition première, en elle-même indémontrable, mais qui se trouve au fondement d'un raisonnement, et qui rend la démonstration possible.",
+      "Au sens moral, un principe est un jugement normatif relatif à ce qui est bien ou mal, à ce qu'il faut faire ou ne pas faire. La pratique se règle en fonction d'un ensemble de principes, c'est-à-dire de règles d'action. Au sens logique, un principe est une proposition première, en elle-même indémontrable, mais qui se trouve au fondement d'un raisonnement, et qui rend la démonstration possible.",
   },
   cause: {
     terme: "Cause",
@@ -364,7 +364,7 @@ window.MARPUP_REPERES = {
     terme: "Public",
     groupe: "Public / privé",
     definition:
-      "Est public ce qui appartient à tous, ce qui concerne la collectivité ou ce qui dépend de l'Etat.",
+      "Est public ce qui appartient à tous, ce qui concerne la collectivité ou ce qui dépend de l'État.",
   },
   prive: {
     terme: "Privé",
@@ -396,7 +396,7 @@ window.MARPUP_REPERES = {
     terme: "Pratique",
     groupe: "Théorie / pratique",
     definition:
-      "Une pratique est l'articulation d'un ensemble d'actions réalisées en conformité avec une théorie, et donc avec méthode. « En pratique » signifie « en fait ». Quelque chose est vrai en pratique quand elle est effective, quand elle existe réellement.",
+      "Une pratique est l'articulation d'un ensemble d'actions réalisées en conformité avec une théorie, et donc avec méthode. « En pratique » signifie « en fait ». Quelque chose est vrai en pratique quand il est effectif, quand il existe réellement.",
   },
 
   transcendant: {

@@ -1,227 +1,181 @@
-# Installer le projet
+# MarpUp
 
-## Cloner le repo officiel
+MarpUp est un environnement de création de présentations pédagogiques en Markdown fondé sur [Marp](https://marp.app/). Le projet fournit un thème, des snippets VS Code, des mises en page prêtes à l'emploi et des modules interactifs pour les repères et notions philosophiques.
 
-- Se rendre dans le répertoire où tu veux cloner le repo.
-- Ouvrir VSC
-- Ouvrir le terminal dans VSC
-- Cloner le repo officiel avec `git clone https://github.com/julienborgeon/marpup.git`
-- Fermer VSC
+## Documentation
 
-## Brancher le projet
+- [Guide d'utilisation](docs/GUIDE_UTILISATION_MARPUP.md) : créer, prévisualiser, générer et transporter une présentation.
+- [Guide des classes](docs/GUIDE_CLASSES_MARPUP.md) : retrouver toutes les classes Marpit et leurs snippets.
+- [Guide de personnalisation](docs/GUIDE_PERSONNALISATION_MARPUP.md) : modifier les tokens, créer des snippets personnels et compléter les données philosophiques.
+- [`slides/demo.md`](slides/demo.md) : consulter une présentation montrant les principaux composants disponibles.
 
-- Ouvrir le projet cloné avec VSC (pas son dossier parent !)
-- Ouvrir le terminal dans VSC
-- Vérifier l'origine du repo distant avec `git remote -v`. Ceci devrait apparaître :
+## Prérequis
+
+- Installer [Git](https://git-scm.com/).
+- Installer [Node.js](https://nodejs.org/) en version 18 ou ultérieure, avec npm.
+- Utiliser de préférence [Visual Studio Code](https://code.visualstudio.com/) afin de bénéficier des snippets et des réglages du projet.
+- Installer les extensions recommandées par VS Code, notamment **Marp for VS Code** et **Prettier**.
+
+Vérifier les installations si nécessaire :
 
 ```bash
-origin  https://github.com/julienborgeon/marpup.git (fetch)
-origin  https://github.com/julienborgeon/marpup.git (push)
+git --version
+node --version
+npm --version
 ```
 
-- Supprimer l'origine avec `git remote remove origin`
-- Se rendre sur GitHub et créer un nouveau repository pour le projet. Par exemple :
-  - Nom du repository : `marpup-philo`
-  - Visibilité : `Public`
-  - Laisser décochés "Initialize this repository with a README" et "Add .gitignore"
-- Retourner dans le terminal de VSC et vérifier que l'origine a bien été supprimée avec `git remote -v`. Cela ne devrait rien afficher.
-- Ajouter la nouvelle origine avec `git remote add origin <URL_DE_VOTRE_REPO>`
-- Vérifier que la nouvelle origine a bien été ajoutée avec `git remote -v`. Cela devrait afficher l'URL de votre nouveau repository.
-- Pousser le projet local vers le nouveau repo distant avec `git push -u origin main`
-- Vérifier sur GitHub que le projet a bien été poussé et que tous les fichiers sont présents.
+## Installation et dépôt personnel
 
-## Initialiser le projet
+### 1. Créer un dépôt vide
 
-- Initialiser le projet avec `npm ci` (cela installera toutes les dépendances nécessaires, y compris celles listées dans le fichier `package-lock.json`)
-- Lancer `npx marp --version` pour vérifier que Marp est correctement installé (cela affichera la version de Marp installée)
-- Bonus : installer l'extension [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) pour une meilleure expérience Markdown dans VSC
+Créer sur GitHub un nouveau dépôt destiné aux présentations personnelles. Ne pas initialiser ce dépôt avec un README, un `.gitignore` ou une licence.
 
----
+### 2. Cloner MarpUp
 
-# Structure du projet
-
-```
-marpup/
-├─ .vscode/
-│  └─ extensions.json               # configuration spécifique à VSC pour ce projet
-│  └─ settings.json                 # configuration spécifique à VSC pour ce projet
-│  └─ marpit-helpers.code-snippets  # raccourcis pour les classes Marpit
-│  └─ marpup-helpers.code-snippets  # raccourcis markdown pour MarpUp
-│  └─ marpup-notions.code-snippets  # raccourcis pour les notions philosophiques
-│  └─ marpup-reperes.code-snippets  # raccourcis pour les repères philosophiques
-├─ dist/                            # fichiers générés (PDF, PPTX, HTML)
-├─ docs/                            # futures documentations du projet
-├─ node_modules/                    # répertoire des modules npm installés
-├─ scripts/                         # scripts utilitaires pour le projet
-├─ slides/                          # slides du projet
-│  └─ assets/                       # ressources/media des slides
-│     └─ fonts/                     # police d'écriture du projet
-│     └─ images/                    # images utilisées dans les slides
-│     └─ philosophy/                # modules pour les notions et les repères
-│        └─ notions-data.js         # banque de données des notions
-│        └─ reperes-data.js         # banque de données des repères
-│  └─ demo.md                       # exemple de slides formatées
-├─ themes/                          # thèmes CSS pour Marp
-│  └─ marpup.css                    # thème MarpUp
-├─ .gitignore                       # fichiers et répertoires à ignorer par Git
-├─ .prettierrc.json                 # configuration de Prettier pour le projet
-├─ LICENSE                          # licence du projet
-├─ marp.config.mjs                  # configuration de Marp pour le projet
-├─ package.json                     # fichier de configuration npm
-├─ package-lock.json                # fichier de verrouillage des dépendances npm
-└─ README.md                        # documentation du projet
+```bash
+git clone https://github.com/julienborgeon/marpup.git
+cd marpup
 ```
 
-## Spécificité de MarpUp par rapport à Marp
+### 3. Rediriger le dépôt vers le compte personnel
 
-- La police custom "Atkinson Hyperlegible Next" utilisée pour les titres et le corps du texte n'est pas prévisualisable pendant la prévisualisation native de Marp mais seulement après le rendu final.
-- Les fonctionnalités associées à l'intégration des notions et repères dans les slides dépendent du navigateur pour l'affichage et l'interaction avec les définitions. Autrement dit, la fonction de prévisualisation native de Marp ne permet pas de tester correctement ces fonctionnalités.
-- Pour prévisualiser en live les modifications apportées aux slides, il faut lancer la commande suivante :
+Changer l'URL du dépôt distant `origin` pour qu'elle pointe vers le dépôt personnel.
+
+```bash
+git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
+git remote -v
+git status
+git add .
+git commit -m "First commit"
+git push
+git pull
+```
+
+Remplacer `https://github.com/USERNAME/REPOSITORY.git` par l'adresse HTTPS ou SSH du dépôt vide créé précédemment.
+
+### 4. Installer les dépendances
+
+```bash
+npm ci
+npm exec marp -- --version
+```
+
+Ouvrir ensuite le dossier `marpup` lui-même dans VS Code (et non son dossier parent).
+
+## Démarrage rapide
+
+1. Créer un fichier `.md` directement dans `slides/` (par exemple `slides/test.md`).
+2. Saisir `/template` dans ce fichier et sélectionner le snippet **Marpup : Nouveau diaporama**.
+3. Conserver le YAML et les quatre balises `<script>` générés par le template.
+4. Ajouter les slides suivantes avec `/slide`.
+5. Lancer la prévisualisation avec la commande suivante :
 
 ```bash
 npm run dev
 ```
 
-- Ensuite, il suffit de copier-coller l'URL affichée dans le terminal dans le navigateur pour prévisualiser les slides en live. Cette URL est souvent `http://localhost:8080/`. Elle s'actualise dès qu'un changement est enregistré dans une slide (raccourci VSC : `Ctrl+S`).
-
-## Recommandations
-
-- Ne modifier aucun fichier à l'exception de ceux-ci :
-  - Les slides dans le dossier `slides/`
-    - Se référer à `slides/demo.md` pour un exemple de slides formatées
-  - Les thèmes dans le dossier `themes/`
-    - Les valeurs des variables CSS de la rubrique "TOKENS" peuvent être modifiées si nécessaire, mais éviter de toucher au reste
-  - Les snippets dans le dossier `.vscode/`
-    - Eviter de modifier les snippets de `marpit-helpers.code-snippets`, `marpup-notions.code-snippets` et `marpup-reperes.code-snippets`
-    - Les snippets de `marpup-helpers.code-snippets` peuvent être modifiés si nécessaire
-    - Pour ajouter des snippets personnels, créer un nouveau fichier `custom.code-snippets` dans le dossier `.vscode/`
-  - Les ressources dans le dossier `slides/assets/`
-    - Placer toutes les ressources (images, vidéos, etc.) utilisées dans les slides dans ce dossier
-    - Utiliser des chemins relatifs pour référencer ces ressources dans les slides (Cf. `marpup-helpers.code-snippets` pour des exemples)
-
----
-
-# Personnalisation
-
-## Syntaxe des snippets
-
-Pour utiliser un snippet dans une slide, il suffit de taper le préfixe du snippet défini dans les fichiers `.code-snippets` et de sélectionner le snippet souhaité dans la liste qui apparaît.
-
-1. Pour les snippets "marpup helpers", utilisés pour accélérer l'écriture de markdown complexe, le préfixe est `/`. Exemple :
-
-```markdown
-/image
-```
-
-Insère automatiquement :
-
-```markdown
-![Description](./assets/images/zelda-bed-chill.jpg)
-```
-
-2. Pour les snippets "marpit helpers", utilisés pour ajouter des classes aux sections/slides, le préfixe est `!`. Exemple :
-
-```markdown
-!image-gauche
-```
-
-Insère automatiquement :
-
-```html
-<!-- _class: image-left -->
-```
-
-3. Pour les snippets utilisés pour ajouter des notions et repères, le préfixe est `@`. Exemple :
-
-```markdown
-@art
-```
-
-Insère automatiquement :
-
-```html
-<button type="button" class="marpup-notion" data-notion="art">art</button>
-```
-
-## Personnalisation des notions et repères
-
-Les snippets des notions et repères servent à intégrer l'élément HTML dans le fichier markdown, nécessaire aux scripts pour fonctionner correctement.
-Au clic sur un bouton de notion ou de repère, la définition correspondante s'affiche dans une petite fenêtre.
-
-Pour modifier le texte de la notion ou du repère affiché dans la slide, il suffit de modifier le texte entre les balises `<button>` et `</button>`. Exemple :
-
-```html
-<button type="button" class="marpup-repere" data-repere="necessaire">
-  nouveau texte
-</button>
-```
-
-Dans cet exemple, la définition attachée au nouveau texte reste celle du repère "necessaire". Mais le texte affiché dans la slide peut être différent, pour permettre, par exemple, d'accorder un mot ou d'en changer la formulation :
-
-```html
-On parle de la
-<button type="button" class="marpup-repere" data-repere="necessaire">
-  nécessité
-</button>
-dans ce contexte.
-```
-
-Les notions et repères sont définis dans les fichiers `notions-data.js` et `reperes-data.js` respectivement, situés dans le dossier `slides/assets/philosophy/`. Pour personnaliser une définition, il suffit de modifier la valeur de la clé `definition:` en respectant la syntaxe du projet.
-**Un seul paragraphe, sans saut de ligne, est accepté pour cette clé.**
-
-## Personnalisation du thème
-
-A moins de s'y connaître en CSS, il est recommandé de ne pas modifier directement les fichiers de thème. Tu peux toutefois importer un thème dans le dossier `themes/` puis le renseigner dans le front-matter de tes slides Marp. Exemple :
-
-```yaml
----
-theme: marpup
----
-```
-
-Si tu dois néanmoins modifier un fichier de thème, il est préférable de se cantonner à la rubrique "Tokens" du fichier css, en haut du document. Il suffit alors de changer les valeurs associées aux variables de couleurs, typographie, etc. Le reste du fichier s'occupe de la logique des éléments de thème et ne devrait pas être modifié sauf par un développeur.
-
----
-
-# Workflows quotidien
-
-## Commandes npm disponibles
+6. Ouvrir l'adresse indiquée dans le terminal, généralement `http://localhost:8080/`. Elle peut être ouverte dans une fenêtre de navigateur ou directement dans VS Code si l'extension appropriée est installée.
+7. Générer la présentation HTML lorsque le contenu est prêt avec la commande :
 
 ```bash
-npm run dev
-npm run build
-npm run build:pdf
-npm run build:pptx
 npm run build:html
 ```
 
-Les plus utiles pour un usage quotidien sont :
+> [!IMPORTANT]
+> Conserver les fichiers `.md` à la racine de `slides/` pour que les chemins relatifs `./assets/...` insérés par les snippets et le template restent valides. **En cas d'organisation en sous-dossiers, il faudra prévoir de modifier les chemins relatifs en conséquence.**
 
-- `npm run build:pdf` : génère les fichiers PDF à partir des fichiers Marp.
-- `npm run build:pptx` : génère les fichiers PPTX à partir des fichiers Marp.
+## Structure du projet
 
-Les fichiers sont générés dans le sous-dossier `dist/` du projet (accessible dans ton pc).
+```text
+marpup/
+├─ .vscode/                         Réglages, extensions et snippets VS Code
+├─ docs/                            Guides d'utilisation et de personnalisation
+├─ dist/                            Fichiers générés, ignorés par Git
+├─ scripts/
+│  └─ copy-slide-assets.mjs         Copie des ressources locales vers dist/assets
+├─ slides/
+│  ├─ assets/
+│  │  ├─ fonts/                     Polices custom embarquées
+│  │  ├─ images/                    Images locales
+│  │  ├─ videos/                    Vidéos locales
+│  │  └─ philosophy/                Données et logique des modules des notions et repères
+│  └─ demo.md                       Démonstration des composants
+├─ themes/
+│  └─ marpup.css                    Thème et tokens de personnalisation
+├─ marp.config.mjs                  Configuration de Marp CLI
+├─ package.json                     Commandes et dépendances npm
+├─ package-lock.json                Versions verrouillées des dépendances
+└─ README.md                        Point d'entrée du projet
+```
 
-Mais pour conserver la fonctionnalité associée aux repères et aux notions dans les slides, il faut préférer générer les fichiers HTML à partir des fichiers Marp, plutôt que directement les fichiers PDF ou PPTX, en utilisant `npm run build:html`.
-Pour présenter un diapo, il faudra donc double-cliquer sur le fichier HTML généré. Il s'affichera alors dans le navigateur et permettra de cliquer sur les repères et notions pour afficher leurs définitions.
+`node_modules/` est créé par `npm ci`. `dist/` est créé ou actualisé lors des générations.
 
-## Workflow Git
+## Commandes disponibles
 
-```git
+| Commande              | Fonction                                                                                |
+| --------------------- | --------------------------------------------------------------------------------------- |
+| `npm run dev`         | Démarrer le serveur de prévisualisation avec actualisation automatique.                 |
+| `npm run build`       | Générer les présentations en HTML ; alias de `build:html`.                              |
+| `npm run build:html`  | Générer les fichiers HTML dans `dist/`, puis copier les ressources dans `dist/assets/`. |
+| `npm run build:pdf`   | Générer les présentations statiques au format PDF.                                      |
+| `npm run build:pptx`  | Générer les présentations statiques au format PowerPoint.                               |
+| `npm run copy:assets` | Copier uniquement `slides/assets/` vers `dist/assets/`.                                 |
+| `npm run format`      | Formater les fichiers JavaScript avec Prettier.                                         |
+
+## Prévisualisation et présentation
+
+Utiliser `npm run dev` pour travailler dans le navigateur. Cette prévisualisation restitue mieux les polices embarquées et permet de tester les fenêtres interactives des repères et des notions ainsi que la lecture des vidéos.
+
+Insérer une vidéo avec le snippet `/video`, puis conserver le chemin local proposé ou le remplacer par l'adresse directe d'un fichier vidéo distant. Appliquer aux images et aux vidéos les mêmes classes de mise en page `media-*`. Consulter le guide d'utilisation pour les exemples et les limites des sources distantes.
+
+Privilégier le format HTML pour présenter un diaporama utilisant ces modules ou des vidéos. Les exports PDF et PowerPoint restent statiques et ne permettent ni d'ouvrir les définitions interactives ni de lire les vidéos.
+
+Pour déplacer une présentation HTML sur une clé USB ou un autre ordinateur, copier ensemble depuis `dist/` :
+
+```text
+mon-cours.html
+assets/
+```
+
+> [!IMPORTANT]
+> Conserver le fichier HTML et le dossier `assets` côte à côte. Copier uniquement le fichier HTML casserait les chemins des polices, images, médias et scripts.
+
+## Recommandations
+
+- Utiliser `/template` pour commencer chaque nouvelle présentation.
+- Placer les images dans `slides/assets/images/`, les vidéos dans `slides/assets/videos/` et conserver des chemins relatifs.
+- Utiliser `slides/demo.md` comme exemple avant de construire une mise en page manuellement.
+- Modifier uniquement les tokens de personnalisation dans `themes/marpup.css`.
+- Ajouter les snippets personnels dans `.vscode/custom.code-snippets` mais éviter de modifier les snippets existants.
+- Modifier les définitions des repères et notions uniquement dans `reperes-data.js` et `notions-data.js`.
+- Ne pas modifier les scripts de logique `reperes.js` et `notions.js`.
+- Ne pas modifier directement `dist/` ou `node_modules/` !
+- Enregistrer régulièrement le travail dans Git avant une personnalisation importante.
+
+> [!IMPORTANT]
+> Les quatre balises `<script>` insérées par `/template` sont indispensables aux repères et notions. Conserver également `html: true` dans `marp.config.mjs`, car les composants interactifs reposent sur du HTML intégré.
+
+> [!NOTE]
+> Une image, une vidéo, une police ou une carte chargée depuis Internet peut devenir indisponible hors connexion. Préférer les ressources locales dans `slides/assets/` pour une présentation autonome.
+
+## Travail quotidien avec Git
+
+Après les modifications :
+
+```bash
 git status
 git add .
-git commit -m "description"
+git commit -m "Description des modifications"
 git push
 ```
 
-Si tu veux récupérer les dernières modifications du dépôt officiel pour t'assurer que ton projet local est synchronisé avec le repo Github, utilise la commande `git pull` avant de commencer à travailler sur le projet et de lancer les commandes précédentes. C'est un réflexe utile, voire nécessaire, si tu travailles sur le projet depuis plusieurs machines.
-
----
-
-# Ressources utiles
+## Ressources
 
 - [Syntaxe Markdown](https://www.markdownguide.org/basic-syntax/)
-- [Site officiel de Marp](https://marp.app)
-- [Documentation officielle de Marpit](https://marpit.marp.app/markdown)
-- [Thèmes de Marp](https://yoanbernabeu.github.io/MARP-Template-Library/docs/category/themes/)
-- [Dépôt GitHub de Marpup](https://github.com/julienborgeon/marpup)
+- [Documentation de Marp](https://marp.app/)
+- [Documentation de Marpit](https://marpit.marp.app/markdown)
+- [Dépôt officiel de MarpUp](https://github.com/julienborgeon/marpup)
+
+## Licence
+
+Distribué sous licence MIT. Consulter [LICENSE](LICENSE).

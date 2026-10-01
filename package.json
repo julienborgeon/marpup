@@ -20,6 +20,9 @@
   ],
   "author": "Julien Borgeon",
   "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
   "devDependencies": {
     "@marp-team/marp-cli": "^4.5.1",
     "prettier": "^3.3.3"

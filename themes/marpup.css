@@ -3,123 +3,227 @@
  * @size 16:9 1280px 720px
 */
 
-/* @import "default"; */
-
-/* Import des polices personnalisées */
+/*
+================================================================
+  POLICES — FICHIERS EMBARQUÉS
+================================================================
+*/
 @font-face {
   font-style: normal;
   font-weight: 400;
-  src: url("../slides/assets/fonts/AtkinsonHyperlegibleNext-Regular.woff2")
+  src: url("./assets/fonts/AtkinsonHyperlegibleNext-Regular.woff2")
     format("woff2");
   font-family: "Atkinson Hyperlegible Next";
 }
 @font-face {
   font-style: italic;
   font-weight: 400;
-  src: url("../slides/assets/fonts/AtkinsonHyperlegibleNext-RegularItalic.woff2")
+  src: url("./assets/fonts/AtkinsonHyperlegibleNext-RegularItalic.woff2")
     format("woff2");
   font-family: "Atkinson Hyperlegible Next";
 }
 @font-face {
   font-style: normal;
   font-weight: 700;
-  src: url("../slides/assets/fonts/AtkinsonHyperlegibleNext-Bold.woff2")
-    format("woff2");
+  src: url("./assets/fonts/AtkinsonHyperlegibleNext-Bold.woff2") format("woff2");
   font-family: "Atkinson Hyperlegible Next";
 }
 @font-face {
   font-style: italic;
   font-weight: 700;
-  src: url("../slides/assets/fonts/AtkinsonHyperlegibleNext-BoldItalic.woff2")
+  src: url("./assets/fonts/AtkinsonHyperlegibleNext-BoldItalic.woff2")
     format("woff2");
   font-family: "Atkinson Hyperlegible Next";
 }
 
 /*
 ================================================================
-  TOKENS / Variables de design
-  (personnalisable)
+  TOKENS — PERSONNALISATION DU THÈME
+  Modifier uniquement les valeurs de cette section.
 ================================================================
 */
 
 :root {
-  /* Couleurs MarpUp */
+  /* Couleurs générales */
   --marpup-color-background: rgb(250, 249, 246);
   --marpup-color-foreground: rgb(39, 39, 39);
   --marpup-color-primary: rgb(124, 63, 88);
   --marpup-color-muted: rgb(98, 98, 98);
+  --marpup-color-subtle-background: #ececec;
+  --marpup-color-subtle-border: rgb(116, 116, 116);
+  --marpup-color-layout-accent: blue;
+  --marpup-color-red: red;
+  --marpup-color-blue: blue;
+  --marpup-color-green: green;
+  --marpup-color-orange: orange;
+  --marpup-color-code: green;
 
-  /* Typographie de la slide */
+  /* Familles de polices */
   --marpup-font-heading: "Atkinson Hyperlegible Next", Arial, sans-serif;
   --marpup-font-body: "Atkinson Hyperlegible Next", Arial, sans-serif;
 
+  /* Tailles de texte */
   --marpup-font-size-body: 30px;
-  --marpup-font-size-header: 0.5rem;
-  --marpup-font-size-footer: 0.5rem;
-  --marpup-font-size-page-number: 0.5rem;
-  --marpup-font-size-h1: 1.75rem;
-  --marpup-font-size-h2: 1.5rem;
-  --marpup-font-size-h3: 1.25rem;
+  --marpup-font-size-xs: 18px;
+  --marpup-font-size-sm: 24px;
+  --marpup-font-size-md: 30px;
+  --marpup-font-size-lg: 36px;
+  --marpup-font-size-xl: 40px;
+  --marpup-font-size-2xl: 48px;
+  --marpup-font-size-h1: 48px;
+  --marpup-font-size-h2: 36px;
+  --marpup-font-size-h3: 30px;
+  --marpup-font-size-header: 16px;
+  --marpup-font-size-footer: 16px;
+  --marpup-font-size-page-number: 16px;
+  --marpup-font-weight-normal: 400;
+  --marpup-font-weight-bold: 700;
 
+  /* Rythme typographique */
   --marpup-line-height-body: 1.35;
   --marpup-line-height-heading: 1.2;
-  --marpup-letter-spacing-body: 0.015rem;
+  --marpup-line-height-blockquote-long: 1.45;
+  --marpup-letter-spacing-body: 0.24px;
+  --marpup-margin-bottom-h1: 24px;
+  --marpup-margin-bottom-h2: 24px;
+  --marpup-margin-bottom-h3: 16px;
+  --marpup-margin-bottom-heading-stack: 8px;
+  --marpup-margin-bottom-heading-inside: 24px;
+  --marpup-margin-bottom-paragraph: 16px;
 
-  --marpup-margin-bottom-h1: 0.65rem;
-  --marpup-margin-bottom-h2: 0.65rem;
-  --marpup-margin-bottom-h3: 0.65em;
-  --marpup-margin-bottom-paragraph: 0.375rem;
+  /* Structure générale */
+  --marpup-slide-padding: 64px;
+  --marpup-header-height: 64px;
+  --marpup-footer-height: 64px;
+  --marpup-content-gap: 8px;
 
-  /* Structure de la slide */
-  --marpup-slide-padding: 2.5rem;
-  --marpup-header-height: 2.5rem;
-  --marpup-footer-height: 2.5rem;
-  --marpup-content-gap: 0.5rem;
+  /* Listes */
+  --marpup-list-margin-block: 6px;
+  --marpup-list-padding-inline-pc: 60px;
+  --marpup-list-bullet: "→ ";
 
   /* Citations */
-  --marpup-blockquote-border-width: 0.2rem;
-  --marpup-blockquote-padding-left: 1rem;
+  --marpup-blockquote-background: var(--marpup-color-subtle-background);
+  --marpup-blockquote-margin-block: 6px;
+  --marpup-blockquote-border-radius: 8px;
+  --marpup-blockquote-padding: 16px;
+  --marpup-blockquote-long-slide-padding: 24px;
+  --marpup-blockquote-long-chrome-height: 8px;
+
+  /* Encadré de titre */
+  --marpup-title-box-background: rgb(232, 231, 227);
+  --marpup-title-box-radius: 8px;
+  --marpup-title-box-padding-inline: 20px;
+  --marpup-title-box-padding-block: 4px;
+  --marpup-title-box-padding-edge: 12px;
 
   /* Tableaux */
-  --marpup-table-row-background-alt: rgba(124, 63, 88, 0.1);
+  --marpup-table-row-background-alt: var(--marpup-color-subtle-background);
+  --marpup-table-margin-block: 8px;
+  --marpup-table-cell-padding-block: 0.5em;
+  --marpup-table-cell-padding-inline: 0.25em;
+  --marpup-table-border-width: 1px;
 
   /* Médias */
-  --marpup-media-gap: 1rem;
-  --marpup-media-margin-block: 0.25rem;
+  --marpup-media-gap: 8px;
+  --marpup-media-margin-block: 4px;
 
-  /* Boîtes de dialogues */
+  /* Modules philosophiques */
   --marpup-dialog-border-width: 2px;
-  --marpup-dialog-border-radius: 3rem;
-  --marpup-dialog-padding-inline: 0.5rem;
-  --marpup-dialog-width: 45rem;
-  --marpup-dialog-font-size: 0.8rem;
-  --marpup-dialog-header-gap: 0.5rem;
-  --marpup-dialog-header-margin-bottom: 1rem;
-  --marpup-dialog-group-font-size: 0.5rem;
-  --marpup-dialog-title-font-size: 1.1rem;
-  --marpup-dialog-close-size: 1.5rem;
-  --marpup-dialog-close-font-size: 1.2rem;
+  --marpup-dialog-border-radius: 16px;
+  --marpup-dialog-padding-inline: 24px;
+  --marpup-dialog-width: 60%;
+  --marpup-dialog-viewport-gap: 64px;
+  --marpup-dialog-font-size: 32px;
+  --marpup-dialog-header-gap: 8px;
+  --marpup-dialog-header-margin-bottom: 8px;
+  --marpup-dialog-group-margin-bottom: 8px;
+  --marpup-dialog-group-font-size: 16px;
+  --marpup-dialog-title-font-size: 36px;
+  --marpup-dialog-close-size: 32px;
+  --marpup-dialog-close-font-size: 24px;
+  --marpup-dialog-backdrop-background: rgb(0 0 0 / 55%);
+  --marpup-dialog-close-hover-background: var(--marpup-color-subtle-background);
+  --marpup-dialog-padding-inline-compact: 12px;
+  --marpup-dialog-padding-inline-narrow: 8px;
+  --marpup-dialog-font-size-compact: 16px;
+  --marpup-dialog-font-size-narrow: 8px;
+  --marpup-dialog-header-margin-bottom-compact: 16px;
+  --marpup-dialog-group-font-size-compact: 8px;
+  --marpup-dialog-title-font-size-compact: 17.6px;
+  --marpup-dialog-title-font-size-narrow: 12.8px;
+  --marpup-dialog-close-size-compact: 17.6px;
+  --marpup-dialog-close-font-size-compact: 14.4px;
 
   /* Repères philosophiques */
   --marpup-repere-color: #245ea8;
   --marpup-repere-color-hover: #1c4b88;
+  --marpup-repere-underline-thickness: 0.08em;
+  --marpup-repere-underline-offset: 0.12em;
 
   /* Notions philosophiques */
   --marpup-notion-color: #245ea8;
   --marpup-notion-color-hover: #1c4b88;
   --marpup-notion-border-width: 2px;
-  --marpup-notion-border-radius: 3rem;
-  --marpup-notion-padding-inline: 0.5rem;
+  --marpup-notion-border-radius: 48px;
+  --marpup-notion-padding-inline: 8px;
+
+  /* États interactifs */
+  --marpup-focus-outline-width: 0.1em;
+  --marpup-focus-outline-offset: 0.12em;
+  --marpup-focus-border-radius: 0.1em;
+  --marpup-dialog-close-focus-offset: 0.1em;
+
+  /* Mise en page : pictogrammes des titres */
+  --marpup-title-pictogram-qcm: "❓";
+  --marpup-title-pictogram-discussion: "💬";
+  --marpup-title-pictogram-approfondissement: "🔍";
+  --marpup-title-pictogram-redaction: "✍️";
+  --marpup-title-pictogram-groupe: "👥";
+
+  /* Mise en page : définition */
+  --marpup-definition-border-radius: 8px;
+  --marpup-definition-padding-inline-start: 48px;
+  --marpup-definition-padding-inline-end: 24px;
+  --marpup-definition-padding-block: 24px;
+  --marpup-definition-heading-gap: 8px;
+  --marpup-definition-border-width: 1px;
+
+  /* Mise en page : distinction */
+  --marpup-distinction-gap: 48px;
+  --marpup-distinction-border-radius: 8px;
+  --marpup-distinction-padding-block: 16px;
+  --marpup-distinction-padding-inline: 24px;
+  --marpup-distinction-padding-block-small: 8px;
+  --marpup-distinction-grid-width-auto: fit-content;
+  --marpup-distinction-grid-width-small: 50%;
+  --marpup-distinction-grid-width-medium: 75%;
+  --marpup-distinction-grid-width-large: 100%;
+  --marpup-distinction-icon-margin-top: 12px;
+  --marpup-distinction-icon-size: 36px;
+
+  /* Exercices */
+  --marpup-exercise-table-border-width: 1px;
+  --marpup-exercise-table-padding-block: 0.5em;
+  --marpup-exercise-table-padding-inline: 0.75em;
+  --marpup-exercise-grid-column-gap: 56px;
+  --marpup-exercise-grid-row-gap: 8px;
+  --marpup-exercise-grid-margin-top: 24px;
+  --marpup-exercise-redaction-spacing: 16px;
+  --marpup-exercise-qcm-padding-inline: 22px;
+  --marpup-exercise-icon-font-size: 0.875em;
+
+  /* Contenus intégrés */
+  --marpup-embedded-map-min-height: 70vh;
 }
 
 /*
 ================================================================
-  CORE / Styles par défaut du thème
-  (personnalisation non recommandée)
+  BASE — STRUCTURE ET TYPOGRAPHIE
 ================================================================
 */
 
-/* Page/slide par défaut */
+/* Slide */
 section {
   display: flex;
   position: relative;
@@ -134,7 +238,7 @@ section {
   font-family: var(--marpup-font-body);
 }
 
-/* Numéro de page par défaut */
+/* Numéro de page */
 section::after {
   display: flex;
   position: absolute;
@@ -147,7 +251,7 @@ section::after {
   font-size: var(--marpup-font-size-page-number);
 }
 
-/* Entête et pied de page par défaut */
+/* En-tête et pied de page */
 footer,
 header {
   display: flex;
@@ -162,21 +266,21 @@ header {
   color: var(--marpup-color-muted);
 }
 
-/* Entête par défaut */
+/* En-tête */
 header {
   top: 0;
   height: var(--marpup-header-height);
   font-size: var(--marpup-font-size-header);
 }
 
-/* Pied de page par défaut */
+/* Pied de page */
 footer {
   bottom: 0;
   height: var(--marpup-footer-height);
   font-size: var(--marpup-font-size-footer);
 }
 
-/* Titres par défaut */
+/* Titres */
 h1,
 h2,
 h3 {
@@ -189,67 +293,170 @@ h3 {
   overflow-wrap: break-word;
 }
 
-/* Titre de niveau 1 par défaut */
+/* Titre de niveau 1 */
 h1 {
   margin-bottom: var(--marpup-margin-bottom-h1);
   font-size: var(--marpup-font-size-h1);
 }
 
-/* Titre de niveau 2 par défaut */
+/* Titre de niveau 2 */
 h2 {
   margin-bottom: var(--marpup-margin-bottom-h2);
   font-size: var(--marpup-font-size-h2);
 }
 
-/* Titre de niveau 3 par défaut */
+/* Titre de niveau 3 */
 h3 {
   margin-bottom: var(--marpup-margin-bottom-h3);
   font-size: var(--marpup-font-size-h3);
 }
 
+:is(
+  p:has(+ h2),
+  p:has(+ h3),
+  ul:has(+ h2),
+  ul:has(+ h3),
+  ol:has(+ h2),
+  ol:has(+ h3)
+) {
+  margin-bottom: var(--marpup-margin-bottom-heading-inside);
+}
+
 :is(h1:has(+ h2), h1:has(+ h3), h2:has(+ h3)) {
-  margin-bottom: 0.1rem;
+  margin-bottom: var(--marpup-margin-bottom-heading-stack);
 }
 
 /* Paragraphes et éléments de liste */
 p,
 li {
-  line-height: 1.35;
   line-height: var(--marpup-line-height-body);
-  letter-spacing: 0.01em;
   letter-spacing: var(--marpup-letter-spacing-body);
 }
 
-/* Paragraphes par défaut */
+/* Paragraphes */
 p {
   margin-top: 0;
   margin-bottom: var(--marpup-margin-bottom-paragraph);
 }
 
-/* Ancre/lien par défaut */
+/* Blocs de code */
+
+code {
+  color: var(--marpup-color-code);
+}
+
+/* Tailles de texte utilitaires */
+section.text-xs :is(p, li) {
+  font-size: var(--marpup-font-size-xs);
+}
+
+section.text-sm :is(p, li) {
+  font-size: var(--marpup-font-size-sm);
+}
+
+section.text-md :is(p, li) {
+  font-size: var(--marpup-font-size-md);
+}
+
+section.text-lg :is(p, li) {
+  font-size: var(--marpup-font-size-lg);
+}
+
+section.text-xl :is(p, li) {
+  font-size: var(--marpup-font-size-xl);
+}
+
+section.text-2xl :is(p, li) {
+  font-size: var(--marpup-font-size-2xl);
+}
+
+/* Graisses de texte utilitaires */
+section.font-normal :is(p, li) {
+  font-weight: var(--marpup-font-weight-normal);
+}
+
+section.font-bold :is(p, li) {
+  font-weight: var(--marpup-font-weight-bold);
+}
+
+/* Alignement du texte */
+section.text-left p {
+  text-align: left;
+}
+
+section.text-center p {
+  text-align: center;
+}
+
+section.text-right p {
+  text-align: right;
+}
+
+section.text-justify p {
+  text-align: justify;
+}
+
+/* Liens */
 a {
   color: var(--marpup-color-primary);
 }
 
-/* Listes par défaut */
+/* Listes */
 ol,
 ul {
-  margin-block: 0.375rem;
+  margin-block: var(--marpup-list-margin-block);
 }
 
-/* Image par défaut */
+/* Puce personnalisée des listes non ordonnées */
+ul {
+  list-style-type: var(--marpup-list-bullet);
+}
+
+/* Restaure les puces par défaut du navigateur sur une slide donnée */
+section.default-bullets ul {
+  list-style-type: disc;
+}
+
+/* Numérote les ol en "P1, P2, P3..." et remplace les puces des ul par "C" */
+section.pc-bullets ol > li::marker {
+  content: "P" counter(list-item) ". ";
+}
+
+section.pc-bullets ol {
+  margin-block-end: 0 !important;
+  padding-inline-start: var(--marpup-list-padding-inline-pc);
+}
+
+section.pc-bullets ul {
+  margin-block-start: 0 !important;
+  padding-inline-start: var(--marpup-list-padding-inline-pc);
+  list-style-type: "C. ";
+}
+
+/* Images */
 img {
   display: block;
   user-select: none;
 }
 
-/* Bloc de citation par défaut */
+/* Citations */
 blockquote {
   margin-inline: 0;
-  margin-block: 0.375rem;
-  border-left: var(--marpup-blockquote-border-width) solid
-    var(--marpup-color-primary);
-  padding-left: var(--marpup-blockquote-padding-left);
+  margin-block: var(--marpup-blockquote-margin-block);
+  border-radius: var(--marpup-blockquote-border-radius);
+  background-color: var(--marpup-blockquote-background);
+  padding: var(--marpup-blockquote-padding);
+}
+
+section.blockquote-long {
+  --marpup-slide-padding: var(--marpup-blockquote-long-slide-padding);
+  --marpup-header-height: var(--marpup-blockquote-long-chrome-height);
+  --marpup-footer-height: var(--marpup-blockquote-long-chrome-height);
+  justify-content: center;
+}
+
+section.blockquote-long blockquote > p {
+  line-height: var(--marpup-line-height-blockquote-long);
 }
 
 /* Dernier paragraphe d'un bloc de citation */
@@ -257,8 +464,9 @@ blockquote > p:last-child {
   margin-bottom: 0;
 }
 
+/* Tableaux */
 table {
-  margin-block: 0.5rem;
+  margin-block: var(--marpup-table-margin-block);
   border-collapse: collapse;
   max-width: 100%;
 }
@@ -266,14 +474,16 @@ table {
 th,
 td {
   vertical-align: top;
-  padding: 0.5em 0.25em;
+  padding: var(--marpup-table-cell-padding-block)
+    var(--marpup-table-cell-padding-inline);
   text-align: left;
 }
 
 thead th,
 thead td {
-  border-bottom: 1px solid var(--marpup-color-muted);
-  font-weight: 700;
+  border-bottom: var(--marpup-table-border-width) solid
+    var(--marpup-color-muted);
+  font-weight: var(--marpup-font-weight-bold);
 }
 
 tbody tr:nth-child(even) {
@@ -282,26 +492,25 @@ tbody tr:nth-child(even) {
 
 tbody tr:not(:last-child) th,
 tbody tr:not(:last-child) td {
-  border-bottom: 1px solid var(--marpup-color-muted);
+  border-bottom: var(--marpup-table-border-width) solid transparent;
 }
 
 /*
 ================================================================
-  MEDIA / Styles custom des media du thème
-  (personnalisation non recommandée)
+  MÉDIAS — IMAGES, VIDÉOS ET DISPOSITIONS
 ================================================================
 */
 
-/* Conteneur d'une image seule */
-section > p:has(> img:only-child) {
+/* Conteneur d'un média seul */
+section > p:has(> :is(img, video):only-child) {
   flex: 1 1 0;
   margin-bottom: 0;
   margin-block: var(--marpup-media-margin-block);
   min-height: 0;
 }
 
-/* Image seule */
-section > p:has(> img:only-child) > img {
+/* Média seul */
+section > p:has(> :is(img, video):only-child) > :is(img, video) {
   display: block;
   width: 100%;
   height: 100%;
@@ -309,95 +518,321 @@ section > p:has(> img:only-child) > img {
   object-fit: contain;
 }
 
-/* Image alignée à gauche ou à droite */
-section:is(.image-left, .image-right) > p:has(> img:only-child) > img {
+/* Média aligné à gauche ou à droite */
+section:is(.media-left, .media-right)
+  > p:has(> :is(img, video):only-child)
+  > :is(img, video) {
   width: auto;
 }
 
-/* Image alignée à gauche */
-section.image-left > p:has(> img:only-child) > img {
+/* Média aligné à gauche */
+section.media-left > p:has(> :is(img, video):only-child) > :is(img, video) {
   margin-right: auto;
 }
 
-/* Image alignée à droite */
-section.image-right > p:has(> img:only-child) > img {
+/* Média aligné à droite */
+section.media-right > p:has(> :is(img, video):only-child) > :is(img, video) {
   margin-left: auto;
 }
 
-/* Conteneur de plusieurs images */
-section:is(.images-2, .images-3, .images-4) > p:has(> img) {
+/* Structure commune des grilles de médias */
+section:is(
+    .media-2,
+    .media-3,
+    .media-4,
+    .media-5,
+    .media-6,
+    .media-2-full,
+    .media-3-full,
+    .media-4-full,
+    .media-5-full,
+    .media-6-full
+  )
+  > p:has(> :is(img, video)) {
   display: grid;
   flex: 1;
-  gap: var(--marpup-media-gap, 1rem);
   min-height: 0;
 }
 
-/* Images d'une grille */
-section:is(.images-2, .images-3, .images-4) > p:has(> img) > img {
+/* Médias des grilles */
+section:is(
+    .media-2,
+    .media-3,
+    .media-4,
+    .media-5,
+    .media-6,
+    .media-2-full,
+    .media-3-full,
+    .media-4-full,
+    .media-5-full,
+    .media-6-full
+  )
+  > p:has(> :is(img, video))
+  > :is(img, video) {
   display: block;
   width: 100%;
   min-width: 0;
   height: 100%;
   min-height: 0;
+}
+
+/* Sauts de ligne générés entre les médias */
+section:is(
+    .media-2,
+    .media-3,
+    .media-4,
+    .media-5,
+    .media-6,
+    .media-2-full,
+    .media-3-full,
+    .media-4-full,
+    .media-5-full,
+    .media-6-full
+  )
+  > p:has(> :is(img, video))
+  > br {
+  display: none;
+}
+
+/* Grilles contenues dans la slide */
+section:is(.media-2, .media-3, .media-4, .media-5, .media-6)
+  > p:has(> :is(img, video)) {
+  gap: var(--marpup-media-gap);
+}
+
+section:is(.media-2, .media-3, .media-4, .media-5, .media-6)
+  > p:has(> :is(img, video))
+  > :is(img, video) {
   object-fit: contain;
 }
 
-/* Masquage des sauts de ligne entre les images */
-section:is(.images-2, .images-3, .images-4) > p:has(> img) > br {
-  display: none;
-}
-
-/* Grille de 2 images */
-section.images-2 > p:has(> img) {
+/* Nombre de colonnes */
+section:is(.media-2, .media-2-full) > p:has(> :is(img, video)) {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-/* Grille de 3 images */
-section.images-3 > p:has(> img) {
+section:is(.media-3, .media-3-full) > p:has(> :is(img, video)) {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-/* Grille de 4 images */
-section.images-4 > p:has(> img) {
+/* Grilles sur deux rangées */
+section:is(
+    .media-4,
+    .media-5,
+    .media-6,
+    .media-4-full,
+    .media-5-full,
+    .media-6-full
+  )
+  > p:has(> :is(img, video)) {
   grid-template-rows: repeat(2, minmax(0, 1fr));
+}
+
+section:is(.media-4, .media-4-full) > p:has(> :is(img, video)) {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-section.split-left {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  justify-content: flex-start;
-
-  padding: var(--marpup-slide-padding) var(--marpup-slide-padding)
-    var(--marpup-slide-padding) calc(50% + var(--marpup-slide-padding));
+section:is(.media-5, .media-6, .media-5-full, .media-6-full)
+  > p:has(> :is(img, video)) {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-/* Masque header/footer/pagination */
-section.split-left > header,
-section.split-left > footer,
-section.split-left::after {
+/* Grilles en plein écran */
+section:is(
+    .media-2-full,
+    .media-3-full,
+    .media-4-full,
+    .media-5-full,
+    .media-6-full
+  )
+  > p:has(> :is(img, video)) {
+  gap: 0;
+  margin: 0;
+}
+
+section:is(
+    .media-2-full,
+    .media-3-full,
+    .media-4-full,
+    .media-5-full,
+    .media-6-full
+  )
+  > p:has(> :is(img, video))
+  > :is(img, video) {
+  object-fit: cover;
+}
+
+section:is(
+  .media-2-full,
+  .media-3-full,
+  .media-4-full,
+  .media-5-full,
+  .media-6-full
+) {
+  padding: 0;
+}
+
+/* Chrome et titres masqués en plein écran */
+section:is(
+    .media-2-full,
+    .media-3-full,
+    .media-4-full,
+    .media-5-full,
+    .media-6-full
+  )
+  > :is(header, footer, h1, h2, h3, h4, h5, h6),
+section:is(
+    .media-2-full,
+    .media-3-full,
+    .media-4-full,
+    .media-5-full,
+    .media-6-full
+  )::after {
   display: none;
 }
 
-/* Le paragraphe contenant l'image */
-section.split-left > p:has(> img:only-child):first-of-type {
+/* Conteneur d'un média plein écran ou divisé */
+section.fullscreen > p:has(> :is(img, video):only-child):first-of-type,
+section.split-left > p:has(> :is(img, video):only-child):first-of-type,
+section.split-right > p:has(> :is(img, video):only-child):first-of-type {
   position: absolute;
   margin: 0;
+}
+
+/* Média sur la moitié gauche */
+section.split-left > p:has(> :is(img, video):only-child):first-of-type {
   inset: 0 50% 0 0;
 }
 
-/* L'image couvre entièrement la moitié gauche */
-section.split-left > p:has(> img:only-child):first-of-type > img {
+/* Média sur la moitié droite */
+section.split-right > p:has(> :is(img, video):only-child):first-of-type {
+  inset: 0 0 0 50%;
+}
+
+/* Média en plein écran */
+section.fullscreen > p:has(> :is(img, video):only-child):first-of-type {
+  inset: 0;
+}
+
+/* Dimensions des médias plein écran et divisés */
+section.split-left
+  > p:has(> :is(img, video):only-child):first-of-type
+  > :is(img, video),
+section.split-right
+  > p:has(> :is(img, video):only-child):first-of-type
+  > :is(img, video) {
+  width: 100%;
+  height: 100%;
+}
+
+section.fullscreen
+  > p:has(> :is(img, video):only-child):first-of-type
+  > :is(img, video) {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
+/* Ajustement du cadrage des médias */
+section.cover
+  > p:has(> :is(img, video):only-child):first-of-type
+  > :is(img, video),
+section.cover > p:has(> :is(img, video)) > :is(img, video) {
+  object-fit: cover !important;
+}
+
+section.contain
+  > p:has(> :is(img, video):only-child):first-of-type
+  > :is(img, video),
+section.contain > p:has(> :is(img, video)) > :is(img, video) {
+  object-fit: contain !important;
+}
+
+/* Structure des dispositions plein écran et divisées */
+section.fullscreen,
+section.split-left,
+section.split-right {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Contenu à droite d'un média */
+section.split-left {
+  padding: var(--marpup-slide-padding) var(--marpup-slide-padding)
+    var(--marpup-slide-padding) calc(50% + var(--marpup-slide-padding));
+}
+
+/* Contenu à gauche d'un média */
+section.split-right {
+  padding: var(--marpup-slide-padding) calc(50% + var(--marpup-slide-padding))
+    var(--marpup-slide-padding) var(--marpup-slide-padding);
+}
+
+/* Conteneur plein écran */
+section.fullscreen {
+  padding: 0;
+}
+
+/* Chrome masqué pour les dispositions plein écran et divisées */
+section:is(.split-left, .split-right, .fullscreen) > :is(header, footer),
+section:is(.split-left, .split-right, .fullscreen)::after {
+  display: none;
+}
+
 /*
 ================================================================
-  REPERES & NOTIONS / Styles par défaut du module philosophique
-  (personnalisation non recommandée)
+  STRUCTURE DE SLIDE — CHROME ET ENCADRÉ DE TITRE
+================================================================
+*/
+
+/* Chrome masqué sans autre modification de mise en page */
+section.no-chrome > :is(header, footer),
+section.no-chrome::after {
+  display: none;
+}
+
+/* Centre le contenu verticalement sur toute la hauteur/largeur disponible entre les paddings */
+section.title-box {
+  justify-content: center;
+}
+
+/* Encadré grisé englobant le titre et le sous-titre */
+section.title-box > h1,
+section.title-box > h2 {
+  margin: 0;
+  border-radius: 0;
+  background: var(--marpup-title-box-background);
+  padding: var(--marpup-title-box-padding-block)
+    var(--marpup-title-box-padding-inline);
+  text-align: center;
+}
+
+section.title-box > h1 {
+  border-radius: var(--marpup-title-box-radius) var(--marpup-title-box-radius) 0
+    0;
+  padding-top: var(--marpup-title-box-padding-edge);
+}
+
+section.title-box > h1:last-of-type {
+  padding-bottom: var(--marpup-title-box-padding-edge);
+}
+
+section.title-box > h2:last-of-type {
+  border-radius: 0 0 var(--marpup-title-box-radius)
+    var(--marpup-title-box-radius);
+  padding-bottom: var(--marpup-title-box-padding-edge);
+}
+
+section.title-box > :is(header, footer),
+section.title-box::after {
+  display: none;
+}
+
+/*
+================================================================
+  PHILOSOPHIE — REPÈRES, NOTIONS ET DIALOGUES
 ================================================================
 */
 
@@ -411,7 +846,7 @@ section.split-left > p:has(> img:only-child):first-of-type > img {
   background: transparent;
   padding-block: 0;
   font: inherit;
-  font-weight: 700;
+  font-weight: var(--marpup-font-weight-bold);
   line-height: inherit;
 }
 
@@ -421,8 +856,8 @@ section.split-left > p:has(> img:only-child):first-of-type > img {
   padding: 0;
   color: var(--marpup-repere-color);
   text-decoration: underline;
-  text-decoration-thickness: 0.08em;
-  text-underline-offset: 0.12em;
+  text-decoration-thickness: var(--marpup-repere-underline-thickness);
+  text-underline-offset: var(--marpup-repere-underline-offset);
 }
 
 /* Notion interactive */
@@ -448,9 +883,9 @@ section.split-left > p:has(> img:only-child):first-of-type > img {
 
 /* Effet au focus des repères et notions */
 :is(.marpup-repere, .marpup-notion):focus-visible {
-  outline: 0.1em solid currentColor;
-  outline-offset: 0.12em;
-  border-radius: 0.1em;
+  outline: var(--marpup-focus-outline-width) solid currentColor;
+  outline-offset: var(--marpup-focus-outline-offset);
+  border-radius: var(--marpup-focus-border-radius);
 }
 
 /* Fenêtre de définition */
@@ -461,13 +896,17 @@ section.split-left > p:has(> img:only-child):first-of-type > img {
   transform: translate(-50%, -50%);
   box-sizing: border-box;
   margin: 0;
-  border: 0;
+  border: var(--marpup-dialog-border-width) solid
+    var(--marpup-color-subtle-background);
   border-radius: var(--marpup-dialog-border-radius);
   background: var(--marpup-color-background);
   padding: var(--marpup-dialog-padding-inline);
-  width: min(var(--marpup-dialog-width), calc(100% - 4rem));
+  width: min(
+    var(--marpup-dialog-width),
+    calc(100% - var(--marpup-dialog-viewport-gap))
+  );
   max-width: none;
-  max-height: calc(100% - 4rem);
+  max-height: calc(100% - var(--marpup-dialog-viewport-gap));
   overflow: auto;
   overflow-x: hidden;
   color: var(--marpup-color-foreground);
@@ -477,21 +916,21 @@ section.split-left > p:has(> img:only-child):first-of-type > img {
 
 @media (max-width: 600px) {
   :is(.marpup-repere-dialog, .marpup-notion-dialog) {
-    --marpup-dialog-padding-inline: 1rem;
-    --marpup-dialog-font-size: 0.6rem;
+    --marpup-dialog-padding-inline: var(--marpup-dialog-padding-inline-compact);
+    --marpup-dialog-font-size: var(--marpup-dialog-font-size-compact);
   }
 }
 
 @media (max-width: 375px) {
   :is(.marpup-repere-dialog, .marpup-notion-dialog) {
-    --marpup-dialog-padding-inline: 0.5rem;
-    --marpup-dialog-font-size: 0.5rem;
+    --marpup-dialog-padding-inline: var(--marpup-dialog-padding-inline-narrow);
+    --marpup-dialog-font-size: var(--marpup-dialog-font-size-narrow);
   }
 }
 
 /* Fenêtre de définition : arrière-plan du dialogue */
 :is(.marpup-repere-dialog, .marpup-notion-dialog)::backdrop {
-  background: rgb(0 0 0 / 55%);
+  background: var(--marpup-dialog-backdrop-background);
 }
 
 /* Fenêtre de définition : en-tête du dialogue */
@@ -505,21 +944,24 @@ section.split-left > p:has(> img:only-child):first-of-type > img {
 
 @media (max-width: 600px) {
   :is(.marpup-repere-dialog__header, .marpup-notion-dialog__header) {
-    --marpup-dialog-header-gap: 0.5rem;
-    --marpup-dialog-header-margin-bottom: 0.5rem;
+    --marpup-dialog-header-margin-bottom: var(
+      --marpup-dialog-header-margin-bottom-compact
+    );
   }
 }
 
 /* Fenêtre de définition : groupe du dialogue */
 :is(.marpup-repere-dialog__group, .marpup-notion-dialog__group) {
-  margin: 0 0 0.25rem;
+  margin: 0 0 var(--marpup-dialog-group-margin-bottom);
   color: var(--marpup-color-muted);
   font-size: var(--marpup-dialog-group-font-size);
 }
 
 @media (max-width: 600px) {
   :is(.marpup-repere-dialog__group, .marpup-notion-dialog__group) {
-    --marpup-dialog-group-font-size: 0.5rem;
+    --marpup-dialog-group-font-size: var(
+      --marpup-dialog-group-font-size-compact
+    );
   }
 }
 
@@ -532,24 +974,28 @@ section.split-left > p:has(> img:only-child):first-of-type > img {
 
 @media (max-width: 600px) {
   :is(.marpup-repere-dialog__title, .marpup-notion-dialog__title) {
-    --marpup-dialog-title-font-size: 1.1rem;
+    --marpup-dialog-title-font-size: var(
+      --marpup-dialog-title-font-size-compact
+    );
   }
 }
 
 @media (max-width: 375px) {
   :is(.marpup-repere-dialog__title, .marpup-notion-dialog__title) {
-    --marpup-dialog-title-font-size: 0.8rem;
+    --marpup-dialog-title-font-size: var(
+      --marpup-dialog-title-font-size-narrow
+    );
   }
 }
 
 /* Fenêtre de définition : titre du repère */
 .marpup-repere-dialog__title {
-  color: var(--marpup-color-repere);
+  color: var(--marpup-repere-color);
 }
 
 /* Fenêtre de définition : titre de la notion */
 .marpup-notion-dialog__title {
-  color: var(--marpup-color-notion);
+  color: var(--marpup-notion-color);
 }
 /* Fenêtre de définition : définition du dialogue */
 :is(.marpup-repere-dialog__definition, .marpup-notion-dialog__definition) {
@@ -577,24 +1023,283 @@ section.split-left > p:has(> img:only-child):first-of-type > img {
 
 @media (max-width: 600px) {
   :is(.marpup-repere-dialog__close, .marpup-notion-dialog__close) {
-    --marpup-dialog-close-size: 1.1rem;
-    --marpup-dialog-close-font-size: 0.9rem;
+    --marpup-dialog-close-size: var(--marpup-dialog-close-size-compact);
+    --marpup-dialog-close-font-size: var(
+      --marpup-dialog-close-font-size-compact
+    );
   }
 }
 
 /* Fenêtre de définition : bouton de fermeture du dialogue au survol */
 :is(.marpup-repere-dialog__close, .marpup-notion-dialog__close):hover {
-  background: rgb(0 0 0 / 8%);
+  background: var(--marpup-dialog-close-hover-background);
 }
 
 /* Fenêtre de définition : bouton de fermeture du dialogue au focus pour le repère */
 .marpup-repere-dialog__close:focus-visible {
-  outline: 0.1em solid var(--marpup-color-repere);
-  outline-offset: 0.1em;
+  outline: var(--marpup-focus-outline-width) solid var(--marpup-repere-color);
+  outline-offset: var(--marpup-dialog-close-focus-offset);
 }
 
 /* Fenêtre de définition : bouton de fermeture du dialogue au focus pour la notion */
 .marpup-notion-dialog__close:focus-visible {
-  outline: 0.1em solid var(--marpup-color-notion);
-  outline-offset: 0.1em;
+  outline: var(--marpup-focus-outline-width) solid var(--marpup-notion-color);
+  outline-offset: var(--marpup-dialog-close-focus-offset);
+}
+
+/*
+================================================================
+  MISE EN PAGE — DÉFINITION ET DISTINCTION
+================================================================
+*/
+
+/* Définition + exemples */
+section.layout-definition > ul {
+  border-radius: var(--marpup-definition-border-radius);
+  background-color: var(--marpup-blockquote-background);
+  padding-inline-start: var(--marpup-definition-padding-inline-start);
+  padding-inline-end: var(--marpup-definition-padding-inline-end);
+  padding-block: var(--marpup-definition-padding-block);
+}
+
+section.layout-definition > ul > li:first-child {
+  margin-bottom: var(--marpup-definition-heading-gap);
+  border-bottom: var(--marpup-definition-border-width) solid
+    var(--marpup-color-subtle-border);
+  padding-bottom: var(--marpup-definition-heading-gap);
+  color: var(--marpup-color-layout-accent);
+  font-weight: var(--marpup-font-weight-bold);
+}
+
+/* Distinction entre deux concepts */
+section.layout-distinction > .grid {
+  display: grid;
+  position: relative;
+  grid-auto-flow: column;
+  justify-items: center;
+  gap: var(--marpup-distinction-gap);
+  margin-inline: auto;
+  width: var(--marpup-distinction-grid-width-auto);
+}
+
+section.layout-distinction > .grid > .col {
+  width: 100%;
+}
+
+section.layout-distinction > .grid > .col:nth-child(2) > p {
+  margin-top: var(--marpup-distinction-icon-margin-top);
+  font-size: var(--marpup-distinction-icon-size);
+}
+
+section.layout-distinction.layout-sm > .grid {
+  width: var(--marpup-distinction-grid-width-small);
+}
+
+section.layout-distinction.layout-md > .grid {
+  width: var(--marpup-distinction-grid-width-medium);
+}
+
+section.layout-distinction.layout-lg > .grid {
+  width: var(--marpup-distinction-grid-width-large);
+}
+
+section.layout-distinction > .grid > .col > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+section.layout-distinction > .grid > .col > ul > li {
+  border-radius: 0;
+  background-color: var(--marpup-blockquote-background);
+  padding-inline: var(--marpup-distinction-padding-inline);
+  padding-block-end: var(--marpup-distinction-padding-block-small);
+}
+
+/* Élément principal */
+section.layout-distinction > .grid > .col > ul > li:first-child {
+  margin-bottom: var(--marpup-distinction-padding-block);
+  border-radius: var(--marpup-distinction-border-radius);
+  padding-block: var(--marpup-distinction-padding-block);
+  color: var(--marpup-color-layout-accent);
+  font-weight: var(--marpup-font-weight-bold);
+  text-align: center;
+}
+
+/* Début du groupe secondaire */
+section.layout-distinction > .grid > .col > ul > li:nth-child(2) {
+  border-radius: var(--marpup-distinction-border-radius)
+    var(--marpup-distinction-border-radius) 0 0;
+  padding-block-start: var(--marpup-distinction-padding-block);
+}
+
+/* Fin du groupe secondaire */
+section.layout-distinction
+  > .grid
+  > .col
+  > ul
+  > li:last-child:not(:first-child) {
+  border-radius: 0 0 var(--marpup-distinction-border-radius)
+    var(--marpup-distinction-border-radius);
+  padding-block-end: var(--marpup-distinction-padding-block);
+}
+
+/* Un seul élément secondaire */
+section.layout-distinction > .grid > .col > ul > li:nth-child(2):last-child {
+  border-radius: var(--marpup-distinction-border-radius);
+  padding-block: var(--marpup-distinction-padding-block);
+}
+
+/*
+================================================================
+  EXERCICES — MISES EN PAGE ET PICTOGRAMMES
+================================================================
+*/
+
+/* Tableau de distinction */
+section.exo-distinction > table {
+  border-collapse: collapse;
+}
+
+/* Séparation verticale entre les colonnes */
+section.exo-distinction > table :is(th, td):not(:last-child) {
+  border-right: var(--marpup-exercise-table-border-width) solid currentColor;
+}
+
+/* Séparation sous l'en-tête */
+section.exo-distinction > table thead {
+  border-bottom: var(--marpup-exercise-table-border-width) solid currentColor;
+}
+
+section.exo-distinction > table tbody tr:not(:last-child) th,
+section.exo-distinction > table tbody tr:not(:last-child) td {
+  border-bottom: none;
+}
+
+section.exo-distinction > table th,
+section.exo-distinction > table tbody td {
+  padding: var(--marpup-exercise-table-padding-block)
+    var(--marpup-exercise-table-padding-inline);
+}
+
+section.exo-distinction > .grid-item > ul,
+section.exo-distinction > .grid-item > ol {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: var(--marpup-exercise-grid-column-gap);
+  row-gap: var(--marpup-exercise-grid-row-gap);
+  justify-items: center;
+  margin-top: var(--marpup-exercise-grid-margin-top);
+  margin-inline: auto;
+  padding-inline-start: 0;
+  width: fit-content;
+}
+
+/* Exercice de rédaction */
+section.exo-redaction > h2 {
+  margin-block-start: var(--marpup-exercise-redaction-spacing);
+  border-block: var(--marpup-exercise-table-border-width) solid currentColor;
+  padding-block: var(--marpup-exercise-redaction-spacing);
+  color: var(--marpup-color-foreground);
+  font-weight: var(--marpup-font-weight-normal);
+  font-size: var(--marpup-font-size-body);
+}
+
+/* Questionnaire à choix multiple */
+section.exo-qcm > ul {
+  padding-inline-start: var(--marpup-exercise-qcm-padding-inline);
+  list-style-type: "➤ ";
+}
+
+/* Carte de raisonnement */
+section.exo-raisonnement {
+  justify-content: center;
+}
+
+/* Titres avec pictogrammes */
+section:is(
+    .exo-qcm,
+    .exo-discussion,
+    .exo-approfondissement,
+    .exo-redaction,
+    .exo-groupe
+  )
+  > :is(h1, h2, h3):first-of-type {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Pictogrammes */
+section:is(
+    .exo-qcm,
+    .exo-discussion,
+    .exo-approfondissement,
+    .exo-redaction,
+    .exo-groupe
+  )
+  > :is(h1):first-of-type::before {
+  display: inline-block;
+  padding-right: 8px;
+  font-size: var(--marpup-exercise-icon-font-size);
+}
+
+/* Pictogramme du QCM */
+section.exo-qcm > :is(h1):first-of-type::before {
+  content: var(--marpup-title-pictogram-qcm);
+}
+
+/* Pictogramme de discussion */
+section.exo-discussion > :is(h1):first-of-type::before {
+  content: var(--marpup-title-pictogram-discussion);
+}
+
+/* Pictogramme d'approfondissement */
+section.exo-approfondissement > :is(h1):first-of-type::before {
+  content: var(--marpup-title-pictogram-approfondissement);
+}
+
+/* Pictogramme de rédaction */
+section.exo-redaction > :is(h1):first-of-type::before {
+  content: var(--marpup-title-pictogram-redaction);
+}
+
+/* Pictogramme de groupe */
+section.exo-groupe > :is(h1):first-of-type::before {
+  content: var(--marpup-title-pictogram-groupe);
+}
+
+/*
+================================================================
+  CONTENUS INTÉGRÉS — CARTES
+================================================================
+*/
+
+.embeded-map {
+  display: block;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  min-height: var(--marpup-embedded-map-min-height);
+}
+
+/*
+================================================================
+  UTILITAIRES — COULEURS DE TEXTE
+================================================================
+*/
+
+span.red {
+  color: var(--marpup-color-red);
+}
+
+span.blue {
+  color: var(--marpup-color-blue);
+}
+
+span.green {
+  color: var(--marpup-color-green);
+}
+
+span.orange {
+  color: var(--marpup-color-orange);
 }
