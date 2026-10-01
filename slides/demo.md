@@ -103,7 +103,7 @@ Integer fringilla eget ex ac tincidunt. Orci varius natoque penatibus et magnis 
 
 # Bloc de citation longue
 
-La page suivante figure une mise en page spéciale pour les citations longues : elle ajoute les directive `blockquote-long` à la slide ainsi que les modificateurs de taille et d'alignement de texte `text-sm` et `text-justify`, et empêche l'affichage de l'en-tête, le pied de page et les numéros de page avec la classe `no-chrome`.
+La slide suivante figure une mise en page spéciale pour les citations longues : elle ajoute la directive `blockquote-long` à la slide ainsi que les modificateurs de taille et d'alignement de texte `text-sm` et `text-justify`, et empêche l'affichage de l'en-tête, le pied de page et les numéros de page avec la classe `no-chrome`.
 
 **TIP :** Selon la taille du texte cité, les modificateurs `text-md` ou `text-lg` peuvent être utilisés à la place de `text-sm`.
 
@@ -314,7 +314,7 @@ Les médias en plein écran permettent d'afficher des images ou des vidéos occu
 
 Les médias peuvent aussi n'occuper qu'une partie de la diapositive avec les directives `<!-- _class: split-left -->` ou `<!-- _class: split-right -->`.
 
-**TIP :** de façon générale, la classe `contain` permet de s'assurer que le média est entièrement visible à l'intérieur de sa zone, sans être rogné. Tandis que la classe `cover` permet au média de couvrir toute la zone, même si cela implique qu'une partie soit rognée. Ces deux classes peuvent être ajoutées au directives standard après un espace.
+**TIP :** de façon générale, la classe `contain` permet de s'assurer que le média est entièrement visible à l'intérieur de sa zone, sans être rogné. Tandis que la classe `cover` permet au média de couvrir toute la zone, même si cela implique qu'une partie soit rognée. Ces deux classes peuvent être ajoutées aux directives standard après un espace.
 
 ---
 
@@ -322,6 +322,61 @@ Les médias peuvent aussi n'occuper qu'une partie de la diapositive avec les dir
 
 <!-- _class: fullscreen -->
 
+![Description](./assets/images/zelda-bed-chill.jpg)
+
+---
+
+# Deux images en grille plein écran
+
+<!-- _class: media-2-full cover -->
+
+![Description](./assets/images/zelda-bed-chill.jpg)
+![Description](./assets/images/zelda-bed-chill.jpg)
+
+---
+
+# Trois images en grille plein écran
+
+<!-- _class: media-3-full cover -->
+
+![Description](./assets/images/zelda-bed-chill.jpg)
+![Description](./assets/images/zelda-bed-chill.jpg)
+![Description](./assets/images/zelda-bed-chill.jpg)
+
+---
+
+# Quatre images en grille plein écran
+
+<!-- _class: media-4-full cover -->
+
+![Description](./assets/images/zelda-bed-chill.jpg)
+![Description](./assets/images/zelda-bed-chill.jpg)
+![Description](./assets/images/zelda-bed-chill.jpg)
+![Description](./assets/images/zelda-bed-chill.jpg)
+
+---
+
+# Cinq images en grille plein écran
+
+<!-- _class: media-5-full cover -->
+
+![Description](./assets/images/zelda-bed-chill.jpg)
+![Description](./assets/images/zelda-bed-chill.jpg)
+![Description](./assets/images/zelda-bed-chill.jpg)
+![Description](./assets/images/zelda-bed-chill.jpg)
+![Description](./assets/images/zelda-bed-chill.jpg)
+
+---
+
+# Six images en grille plein écran
+
+<!-- _class: media-6-full cover -->
+
+![Description](./assets/images/zelda-bed-chill.jpg)
+![Description](./assets/images/zelda-bed-chill.jpg)
+![Description](./assets/images/zelda-bed-chill.jpg)
+![Description](./assets/images/zelda-bed-chill.jpg)
+![Description](./assets/images/zelda-bed-chill.jpg)
 ![Description](./assets/images/zelda-bed-chill.jpg)
 
 ---
@@ -400,13 +455,13 @@ La directive `<!-- _class: no-chrome -->` permet de masquer l'en-tête, le pied 
 
 # Mise en page : Distinctions
 
-<!-- _class: layout-distinction layout-md text-md -->
+<!-- _class: layout-distinction text-md -->
 
 <div class="grid">
 
 <div class="col">
 
-- Concept 1
+- Premier concept
 - Exemple
 - Exemple
 
@@ -414,7 +469,13 @@ La directive `<!-- _class: no-chrome -->` permet de masquer l'en-tête, le pied 
 
 <div class="col">
 
-- Concept 1
+≠
+
+</div>
+
+<div class="col">
+
+- Second concept
 - Exemple
 - Exemple
 
@@ -487,7 +548,7 @@ Pour travailler avec des arbres de raisonnement, il faut :
 - Construire un arbre de raisonnement
 - Cliquer sur l'icône de lien
 - Copier l'URL générée
-- Utiliser le snippet `exo-raisonnement` et coller l'URL entre les guillemets simples de `src=''`
+- Utiliser le snippet `!exo-raisonnement` et coller l'URL entre les guillemets simples de `src=''`
 - Travailler en live avec les élèves, et **ne pas sauvegarder les modifications**
 
 <br>
@@ -507,7 +568,7 @@ Pour travailler avec des arbres de raisonnement, il faut :
 
 # Pictogrammes des titres
 
-Les titres des exercices de slides d'exercice sont accompagnés de pictogrammes spécifiques pour faciliter leur identification.
+Les titres des slides d'exercice sont accompagnés de pictogrammes spécifiques pour faciliter leur identification.
 
 **NB :** la condition pour l'affichage du pictogramme est que la slide possède la directive correspondante :
 

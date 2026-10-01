@@ -68,7 +68,7 @@ Utiliser les snippets de `.vscode/marpup-helpers.code-snippets` pour insérer ra
 - `/quote` pour créer une citation ;
 - `/table`, `/table3`, `/table4` et `/table-align` pour créer des tableaux ;
 - `/image` pour insérer une image située dans `slides/assets/images/` ;
-- `/video` pour insérer une vidéo locale ou distante avec ses contrôles de lectureµ ;
+- `/video` pour insérer une vidéo locale ou distante avec ses contrôles de lecture ;
 - `/break` pour forcer un saut de ligne ;
 - `/color` pour colorer ponctuellement du texte.
 
